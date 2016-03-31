@@ -13,22 +13,42 @@ body.newsfeed #content
     max-width 600px
 
   .forum-info
+    margin-bottom 50px
+    border-bottom 4px solid #fadc00
+
+    .content
+      max-width 630px
+
     .cover
-      padding 2em 0 4em
+      padding 92px 0 100px
       font-size 16px
       color #f9f9f9
+      text-align center
       background-size cover
       background-repeat no-repeat
       background-position center top
-      background-image unquote("url('boot/cover-hands.jpg')")
+      background-image unquote("url('https://cldup.com/iZewRrgE1u.png')")
 
       .content
         padding-bottom 0
 
+      .logo
+        display inline-block
+        margin-bottom 30px
+        width 220px
+
       p
-        margin 0 0 1em
+        color #414042
+        margin 0 0 1.4em
         font-size 1em
         font-weight 300
+        line-height 1.45
+        letter-spacing 0.2
+        text-rendering optimizeLegibility
+        text-shadow 0 1px 2px #fff
+
+        &:last-of-type
+          margin-bottom 0
 
       .btn
         text-transform none

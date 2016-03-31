@@ -2,8 +2,10 @@
   .forum-info
     .cover
       .content
-        h1= t('newsfeed.welcome.title')
-        p= t('newsfeed.welcome.body')
+        - if (config.logo)
+          img.logo(src=config.logo)
+        p La Legislatura está tratando un proyecto que crea una Agencia de Bienes, pone a la venta inmuebles de la Ciudad y propone desarrollar nuevos proyectos inmobiliarios.
+        p: strong Los terrenos de la Ciudad son nuestros...¿qué quieren hacer con ellos? Conocé el proyecto en profundidad, debatilo y votalo.
   .content
     section(data-forums)
     .forum-pagination(data-pagination, style="display:none")
