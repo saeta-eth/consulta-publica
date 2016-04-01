@@ -1,36 +1,37 @@
 .forum-card
-  padding 0
-  margin-bottom 20px
+  display flex
+  flex-direction column
+  justify-content flex-end
+
+  padding 15px
+  margin 0 10px 20px
   font-size 14px
   overflow hidden
-  background #fff
+  color #eee
+  background-color #bc0c1d
+  background-size cover
+  background-repeat no-repeat
+  background-position center center
 
   .link
     font-weight inherit
     color inherit
     text-decoration inherit
 
-  .cover,
   .body
     padding 20px
 
-  .cover
-    color #eee
-    background-size cover
-    background-repeat no-repeat
-    background-position center center
+  h1
+    color inherit
+    margin 2em 0 0
+    padding-bottom .2em
+    line-height 1.1
+    overflow hidden
 
-    h1
-      color inherit
-      margin 2em 0 0
-      padding-bottom .2em
-      line-height 1.1
-      overflow hidden
-
-    p
-      margin 0
-      line-height 1.5
-      color inherit
+  p
+    margin 0
+    line-height 1.5
+    color inherit
 
   .author
     text-align right
