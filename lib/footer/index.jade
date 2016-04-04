@@ -1,0 +1,13 @@
+footer.footer
+  nav.menu
+    - if (config.frequentlyAskedQuestions)
+      a(href="#{config.subPath}/help/faq")= t('help.faq.title')
+    - if (config.termsOfService)
+      a(href="#{config.subPath}/help/terms-of-service")= t('help.tos.title')
+    - if (config.privacyPolicy)
+      a(href="#{config.subPath}/help/privacy-policy")= t('help.pp.title')
+    - if (config.glossary)
+      a(href="#{config.subPath}/help/glossary")= t('help.glossary.title')
+  .logo
+    a(href='http://democracyos.org')
+      img(src='/footer/democracyos-logo.svg')

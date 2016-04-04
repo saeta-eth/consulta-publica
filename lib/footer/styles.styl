@@ -1,0 +1,33 @@
+.footer
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  align-items center
+  align-content center
+  padding 30px 15px
+  background-color #2d2d2d
+
+  .logo
+    align-self flex-end
+
+    a
+      color inherit
+      text-decoration inherit
+
+    img
+      max-width 100%
+      width 160px
+      margin 0 auto
+
+  .menu
+    flex-grow 2
+
+    a
+      font-size 12px
+      color #f9f9f9
+
+      &:after
+        content ' · '
+
+      &:last-child:after
+        display none
