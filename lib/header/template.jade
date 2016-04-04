@@ -20,9 +20,11 @@
     - var style = color ? 'color: ' + color : '';
     - var signin = config.signinUrl || config.subPath.concat('/signin')
     - var signup = config.signupUrl || config.subPath.concat('/signup')
-    a(href=signin, style=style).login.pull-right.anonymous-user
+    a(href=signin, style=style).link.pull-right.anonymous-user
       i.fa.fa-sign-in
       span= t('header.signin')
-    a(href=signup, style=style).login.pull-right.anonymous-user
+    a(href=signup, style=style).link.pull-right.anonymous-user
       i.fa.fa-user
       span= t('header.signup')
+    - if (config.aboutUs)
+      a.link.pull-right(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
