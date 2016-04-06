@@ -14,7 +14,7 @@
         h1
           i.fa.fa-edit
           =t(form.title)
-        
+
         .commands
           a.btn.btn-success.btn-labeled.save
             span.btn-label
@@ -40,11 +40,12 @@
       form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages
-        .form-group
-          label= t('admin-topics-form.label.forum')
-          select.form-control(name='forum', tabindex=1, validate='required')
-            - each forum in forums
-              option(selected= topic.forum ? forum.id === topic.forum.id : false, value=forum.id)= forum.title
+        - if (config.multiForum)
+          .form-group
+            label= t('admin-topics-form.label.forum')
+            select.form-control(name='forum', tabindex=1, validate='required')
+              - each forum in forums
+                option(selected= topic.forum ? forum.id === topic.forum.id : false, value=forum.id)= forum.title
         .form-group
           label= t('admin-topics-form.label.mediaTitle')
           input.form-control(type='text', id="mediaTitle", name='mediaTitle', tabindex=2, placeholder=t('admin-topics-form.label.mediaTitle'), value=topic.mediaTitle, validate='required')
