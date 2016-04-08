@@ -27,7 +27,7 @@
 
     .meta-information
       p
-        i.fa.fa-calendar
+        i.glyphicon.glyphicon-time
         - if (proposal.closingAt)
           span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
           span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
