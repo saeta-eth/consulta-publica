@@ -1,11 +1,16 @@
 .topic-container
   .topic-card
-    .pic(style='background-image:url(' + topic.coverUrl + ')')
-    .author
-      .author-img(style='background-image:url(' + topic.user.avatar + ')')
-      div
-        p Autor:&nbsp;
-          span=topic.user.displayName
+    -if(topic.coverUrl)
+      .pic(style='background-image:url(' + topic.coverUrl + ')')
+    -if(topic.user)
+      .author  
+        .author-img(style='background-image:url(' + topic.user.avatar + ')')
+        div
+          p Autor:&nbsp;
+            span=topic.user.displayName
+          -if(topic.user.party)
+            p Bloque:&nbsp;
+              span=topic.user.party
     a.title(href=topic.url)=topic.mediaTitle
   p.participando=topic.participants.length + " ciudadanos participando"
   a.btn.btn-primary(href=topic.url) Discutí este proyecto

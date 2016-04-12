@@ -338,6 +338,7 @@
   "settings.notifications.new-topic": "A new topic gets published",
   "settings.notifications.title": "Notifications settings",
   "settings.notifications.someone-replies-your-comments": "Someone replies one of your comments",
+  "settings.party": "Party",
   "settings.password-invalid": "Current password is invalid",
   "settings.password-updated": "Your password was successfuly updated",
   "settings.paste-url-image": "Or paste an image URL here...",
