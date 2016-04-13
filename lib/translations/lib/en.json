@@ -33,6 +33,7 @@
   "admin-topics-form.button.make-private": "Unpublish",
   "admin-topics-form.button.make-public": "Publish",
   "admin-topics-form.button.submit": "Save",
+  "admin-topics-form.button.preview": "Preview",
   "admin-topics-form.clause.button.delete": "Delete",
   "admin-topics-form.clause.confirmation.body": "This action will erase data permanently. Would you like to proceed?",
   "admin-topics-form.clause.confirmation.cancel": "Cancel",
