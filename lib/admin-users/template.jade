@@ -1,4 +1,5 @@
-- var currentUser = user 
+- var currentUser = user
+- var roles = []
 #users-wrapper.admin-wrapper
   .users-admin
     .actions.well
@@ -56,7 +57,7 @@
                         span.badge.role(class=role)=t('settings.role.'+role)
                   p.info
                     i.fa.fa-envelope-o
-                    span.email=user.email 
+                    span.email=user.email
                   p.info
                     i.fa.fa-calendar-check-o
                     span.createdAt.hide=user.createdAt
@@ -66,23 +67,23 @@
                   - if (user.location)
                     p.info
                       i.fa.fa-map-marker
-                      span= t('settings.location.' + user.location) 
+                      span= t('settings.location.' + user.location)
                   - if (user.age)
                     p.info
                       i.fa.fa-birthday-cake
-                      span= t('settings.age.' + user.age) 
+                      span= t('settings.age.' + user.age)
                   - if (user.activities.live)
                     p.info
                       i.fa.fa-street-view
-                      span.activity-live= t('settings.activity.live') 
+                      span.activity-live= t('settings.activity.live')
                   - if (user.activities.work)
                     p.info
                       i.fa.fa-suitcase
-                      span.activity-work= t('settings.activity.work') 
+                      span.activity-work= t('settings.activity.work')
                   - if (user.activities.study)
                     p.info
                       i.fa.fa-graduation-cap
-                      span.activity-study= t('settings.activity.study') 
+                      span.activity-study= t('settings.activity.study')
             - if (currentUser.staff)
               .cols-xs-12.col-md-4
                 .list-group.actions
@@ -98,40 +99,16 @@
                     .off
                       i.fa.fa-circle
                       span=t('admin-users-form.disabled')
-                  - var toggleElectedClass = user.roles.includes('elected')?'on':'off'
-                  a.list-group-item.f-toggle.f-elected(class=toggleElectedClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide
-                    .on
-                      i.fa.fa-circle.fa-elected
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.elected')
-                  - var toggleCityClass = user.roles.includes('city')?'on':'off'
-                  a.list-group-item.f-toggle.f-city(class=toggleCityClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide
-                    .on
-                      i.fa.fa-circle.fa-city
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.city')
-                  - var toggleAmbassadorClass = user.roles.includes('ambassador')?'on':'off'
-                  a.list-group-item.f-toggle.f-ambassador(class=toggleAmbassadorClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide                
-                    .on
-                      i.fa.fa-circle.fa-ambassador
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.ambassador')
-
-                  
-                      
-                      
+                  each role in roles
+                    - var classes = ['f-' + role]
+                    - classes.push(user.roles.includes(role) ? 'on' : 'off')
+                    a.list-group-item.f-toggle.f-elected(class=classes, data-role=role)
+                      .pull-right
+                        i.refresh.fa.fa-refresh.fa-spin.hide
+                        i.ok.fa.fa-check.hide
+                        i.ko.fa.fa-exclamation.hide
+                      .on
+                        i.fa.fa-circle(class='fa-' + role)
+                      .off
+                        i.fa.fa-circle
+                      span=t('settings.role.' + role)
