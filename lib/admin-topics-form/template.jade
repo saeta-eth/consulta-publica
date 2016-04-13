@@ -72,9 +72,11 @@
         .form-group
           label= t('admin-topics-form.label.summary')
           textarea.form-control(name='body', tabindex=7)= topic.body
-        //- .form-group
-        //-   label= t('admin-topics-form.label.keywords')
-        //-   input.form-control(type='text', name='keywords', tabindex=8, placeholder=t('admin-topics-form.placeholder.keywords'), value=topic.keywords)
+        .form-group
+          label= t('admin-topics-form.label.keywords')
+            p.help-text=t('admin-topics-form.help.keywords')
+          label
+            input.form-control(type='tags', name='keywords', pattern="^#", tabindex=8, placeholder=t('admin-topics-form.placeholder.add'))
         .form-group.closingAt
           label= t('admin-topics-form.label.closingAt')
           - var closingAt = ''
