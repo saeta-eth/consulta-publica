@@ -36,7 +36,7 @@
             a.btn.btn-primary.btn-labeled.view(href=topic.url)
               span.btn-label
                 i.fa.fa-external-link
-              span= t('admin-topics-form.delete-topic.button.preview')
+              span= t('admin-topics-form.button.preview')
       form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages
@@ -125,4 +125,4 @@
         a.btn.btn-primary.btn-labeled.view(href=topic.url)
           span.btn-label
             i.fa.fa-external-link
-          span Voir
+          span= t('admin-topics-form.button.preview')
