@@ -6,9 +6,9 @@ mixin btn-new-comment
 
 .comments
   .inner-container
-    .comments-icon.commentable-container
-      i.fa.fa-comments
-    h2=t('comments.arguments')
+    h2
+      i.fa.fa-comments &nbsp;
+      =t('comments.arguments')
     - if (logged)
       ul.comments-nav.nav.nav-pills.nav-justified(role='tablist')
         li.new-comment(role='presentation')
