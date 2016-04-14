@@ -27,6 +27,7 @@
   "admin-topics-form.button.make-private": "Despublicar",
   "admin-topics-form.button.make-public": "Publicar",
   "admin-topics-form.button.submit": "Guardar",
+  "admin-topics-form.button.preview": "Vista Previa",
   "admin-topics-form.clause.button.delete": "Eliminar",
   "admin-topics-form.clause.confirmation.body": "Esta acción eliminará la información de manera permanente. ¿Desea continuar?",
   "admin-topics-form.clause.confirmation.cancel": "Cancelar",
