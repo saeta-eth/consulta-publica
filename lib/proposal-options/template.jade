@@ -45,8 +45,9 @@
             a(href="#{config.subPath}/signup?reference=" + reference)= t('signin.signup')
             = '.'
 
-      .votes-cast
-        em.text-muted= t('proposal-options.votes-cast', { num: census.length || "0" })
+      - if (!closed)
+        .votes-cast
+          em.text-muted= t('proposal-options.votes-cast', { num: census.length || "0" })
 
     - if (closed)
       .results-box.row.clearfix
