@@ -2,7 +2,18 @@ footer.footer
   .logo
     a(href='http://democracyos.org')
       img(src='/footer/democracyos-logo.svg')
-    nav.menu
-      div: a(href='#') Terminos y condiciones
+  nav.menu
+    - if (config.aboutUs)
+      a(href="/help/about-us")= t('help.about-us.title')
+    - if (config.frequentlyAskedQuestions)
+      a(href="/help/faq")= t('help.faq.title')
+    - if (config.termsOfService)
+      a(href="/help/terms-of-service")= t('help.tos.title')
+    - if (config.privacyPolicy)
+      a(href="/help/privacy-policy")= t('help.pp.title')
+    - if (config.glossary)
+      a(href="/help/glossary")= t('help.glossary.title')
+  - if (config.organizationEmail)
+    .help
       span ¿Dudas, sugerencias? escribinos a&nbsp;
-      a(href='#') mail@argentina.gob.ar
+      a(href='#')= config.organizationEmail
