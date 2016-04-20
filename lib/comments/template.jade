@@ -11,15 +11,6 @@ mixin btn-new-comment
       =t('comments.arguments')
     - if (logged)
       ul.comments-nav.nav.nav-pills.nav-justified(role='tablist')
-        li.new-comment(role='presentation')
-          a(href='#form',aria-controls='form',role='tab',data-toggle='pill')
-            i.fa.fa-plus
-        li.active(role='presentation')
-          a(href='#all',aria-controls='all',role='tab',data-toggle='pill')
-            = t('comments.all')
-        li(role='presentation')
-          a(href='#user',aria-controls='user',role='tab',data-toggle='pill')
-            = t('comments.your.arguments')
 
     .filter-container
 
