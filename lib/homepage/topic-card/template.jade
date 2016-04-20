@@ -3,7 +3,7 @@
     -if(topic.coverUrl)
       .pic(style='background-image:url(' + topic.coverUrl + ')')
     -if(topic.user)
-      .author  
+      .author
         .author-img(style='background-image:url(' + topic.user.avatar + ')')
         div
           p Autor:&nbsp;
@@ -12,5 +12,7 @@
             p Bloque:&nbsp;
               span=topic.user.party
     a.title(href=topic.url)=topic.mediaTitle
-  p.participando=topic.participants.length + " ciudadanos participando"
-  a.btn.btn-primary.btn-lg(href=topic.url) Discutí este proyecto
+    p.participando
+      strong=topic.participants.length
+      |  ciudadanos participando
+    a.btn.btn-primary.btn-lg.topic-btn(href=topic.url) Discutí este proyecto

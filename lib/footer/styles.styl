@@ -1,14 +1,19 @@
 .footer
   display flex
-  flex-direction row
+  flex-direction column
   flex-wrap wrap
-  align-items center
-  align-content center
-  padding 30px 15px
+  justify-content center
+  align-self baseline
+  padding 40px 15px
+  margin-top 30px
+  font-size .8em
   background-color #fff
 
+  a
+    color #0273ba
+
   .logo
-    align-self flex-end
+    align-self center
 
     a
       color inherit
@@ -16,18 +21,16 @@
 
     img
       max-width 100%
-      width 160px
-      margin 0 auto
+      width 180px
 
   .menu
     flex-grow 2
+    text-align center
+    margin-top 12px
 
     a
-      font-size 12px
-      color #f9f9f9
+      margin 0 5px
+      padding-top 10px
 
-      &:after
-        content ' · '
-
-      &:last-child:after
-        display none
+  .help
+    text-align center
