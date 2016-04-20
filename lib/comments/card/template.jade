@@ -1,0 +1,93 @@
+mixin remove-action
+  - var hide = repliesCounter && !user.staff ? 'hide' : ''
+  button.btn.btn-default.delete-comment(title=t('comment-card.remove-argument'), class=hide)
+    i.fa.fa-trash-o
+
+li.comment-item(class=classes)
+  .media
+    .media-left
+      - if (comment.alias)
+        span.media-object.avatar
+          i.fa.fa-users
+      - else
+        img.media-object.avatar(src=avatar, title=comment.author.displayName)
+
+    .media-body.media-middle
+      h3.media-heading(title=comment.author.displayName)
+        - if (comment.alias)
+          | #{comment.alias}
+        - else
+          | #{comment.author.fullName}
+          - if (comment.author.staff)
+            span.badge.staff=t('admin-users.list.staff')
+          - if(comment.author.roles)
+            - var roles = comment.author.roles
+            each role in roles
+              span.badge(class=role)=t("settings.role."+role)
+        small.ago(data-time=comment.createdAt.toString())
+        - if (comment.editedAt)
+          small.edited &nbsp;·&nbsp;#{t('comments.edited')}
+        - if (user.logged())
+          .actions.btn-group.pull-right
+            button.btn.btn-default.btn-circle.dropdown-toggle.view-options(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+              i.fa.fa-cog
+            ul.dropdown-menu
+              - if (!own)
+                li
+                  a.comment-action.link-report.flag(href="#", title=spamTitle, class=flags ? 'selected' : '')
+                    span.count=comment.flags.length ? comment.flags.length : ''
+                    i.glyphicon.glyphicon-flag
+              - if (own)
+                li
+                  a.comment-action.link-edit.btn-edit(href="#", title=t('comments.edit.argument'))
+                    i.fa.fa-pencil
+              - if (own || user.staff)
+                - var hide = repliesCounter && !user.staff ? 'hide' : ''
+                li
+                  a.delete-comment(title=t('comment-card.remove-argument'), class=hide)
+                    i.fa.fa-trash-o
+      - if (comment.count)
+        div.count
+          span= comment.count + ' ' + t('comment-card.count')
+  .comment-panel
+    .comment-body
+      .comment-text!=markdown(comment.text)
+      - if (own || user.staff)
+        .oncomment.remove-comment= t('comments.arguments.confirm-remove')
+          -if (!own && user.staff)
+            br
+            =t('comments.removing-argument')
+          .remove-confirm-actions
+            a.confirm-remove(href='#')= t('common.ok')
+            a.cancel-remove(href='#')= t('common.cancel')
+      .oncomment.message
+        p.spam-message=t('comment-card.flagged-as-spam')
+          | .
+          span.show-spam: a(href='#')= t('comment-card.show')
+    .comment-form
+    - if (comment.alias)
+      .comment-alias-from
+        span.title=t('comments.alias.from')
+        img.avatar(src=avatar, title=comment.author.displayName)
+        span.name #{comment.author.fullName}
+  .comment-actions.btn-toolbar(role='toolbar')
+    - if (repliesCounter)
+      .btn-group(role='group')
+        button.btn.btn-default.reply-counter
+          i.fa.fa-comments-o
+          span.reply-counter= repliesCounter > 0 ? repliesCounter : ''
+          i.fa.fa-caret-down
+    - if (user.id)
+      .btn-group(role='group')
+        button.btn.btn-block.btn-dashed.new-reply
+          i.fa.fa-plus
+          span=t('comments.reply')
+  span.error
+    .oncomment.loginrequired
+      =t('comments.sign-in-required-to-vote-comments')
+      |.
+      a(href='#{config.subPath}/signin')= t('signin.login')
+      |  #{t('common.or')}
+      a(href='#{config.subPath}/signup')= t('signin.signup')
+      |.
+  .replies-container

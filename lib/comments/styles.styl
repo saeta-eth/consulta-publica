@@ -1,0 +1,116 @@
+/* Vars
+-------------------------------------------------- */
+content_width = 780px
+tab_color = #909fa0
+/* Comments
+-------------------------------------------------- */
+.comments
+  background #f9f9f9
+  padding-top 50px
+  padding-bottom 50px
+
+  .lock-spinner
+      background-color #f9f9f9
+
+  .no-comments
+    text-align center
+
+  .inner-container
+    position relative
+    max-width content_width
+    min-height 5em
+
+    .filter-container, .form-toolbar
+      margin-top 12px
+      height 20px
+
+    .media-list
+      margin-top 10px
+
+    ul.comments-nav.nav-pills.nav-justified
+      li
+        display table-cell
+        width content_width
+
+        & > a
+          border-radius 0px
+          background-color tab_color
+          border-right 1px solid darken( tab_color , 30% )
+          color white
+          font-size 14px
+          padding 5px 0
+
+          transition all 0.3s ease
+
+          &:hover
+            background-color darken( tab_color , 30% )
+
+        &.active > a
+          background-color darken( tab_color , 30% )
+          box-shadow rgba(0,0,0,0.15) 0 3px 5px 0 inset
+        &:first-of-type > a
+          border-radius 4px 0px 0px 4px
+        &:last-of-type > a
+          border-radius 0px 4px 4px 0px
+          border-right none
+
+        &.new-comment
+          width 34px
+          a
+            background-color #EF5350
+            border-right none
+            padding 8px 10px 7px
+            &:hover
+              background-color darken(#EF5350, 40%)
+
+    form.comment-form
+
+      .form-toolbar
+        margin-left 10px
+        margin-bottom 5px
+        font-size 12px
+        font-weight bold
+        .fa
+          margin 0 6px
+
+      textarea
+        width 100%
+        padding 2%
+      .form-submit
+        background-color #484848
+        color white
+        &:hover
+          background-color #2d2d2d
+      .form-messages
+        color red
+        display block
+      span.error
+        top 6px
+        color red
+        display block
+
+      .form-inline
+        .form-group
+          label
+            margin: 5px 10px
+            font-size 12px
+            font-weight bold
+            display inline-block
+
+    .btn-block
+      margin-bottom: 15px
+      span
+        text-align left
+        display inline-block
+
+    .signup-info
+      margin 20px 10px
+      font-size 14px
+
+@import './comments'
+@import './filter/styles'
+@import './card/styles'
+@import './card/edit/styles'
+@import './card/vote/styles'
+@import './card/replies/styles'
+@import './card/replies/edit/styles'

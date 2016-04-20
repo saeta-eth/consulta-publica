@@ -1,0 +1,287 @@
+.comment-item
+  max-width content_width
+  margin 6px auto
+  position relative
+
+  &.spam .spam-message
+    display block !important
+  &:hover
+    .media-heading .comment-action
+      display inline-block
+  &.spam
+    .comment-text
+      display none
+  &.remove
+    overflow visible
+    .btn-remove
+      display none
+    .comment-text
+      color #bdc3c7
+    .remove-comment
+      display block
+    .comment-actions
+      display none
+
+  .media
+    overflow visible
+
+  .media-left
+    width 46px
+    margin-right 20px
+    white-space nowrap
+
+    .avatar
+      display inline-block
+      width 46px
+      height 46px
+      border-radius 100px
+      text-align center
+
+      .fa
+        font-size 32px
+        margin 7px auto
+        color #444444
+
+  .media-heading
+    cursor default
+    small.ago
+      margin-left 10px
+
+    .btn-circle
+      height 22px
+      width 22px
+      border-radius 11px
+      font-size 12px
+      padding 4px 5px
+      border none
+
+    .dropdown-menu
+      min-width 20px
+      text-align center
+
+    .actions
+      opacity 0
+      transition opacity 0.3s ease
+
+  &:hover .media-heading .actions
+    opacity 1
+
+  .media-body
+    position relative
+    min-height 76px
+    overflow visible
+    padding-right 7px
+
+    -webkit-transition all 0.3s ease
+    -moz-transition all 0.3s ease
+    -ms-transition all 0.3s ease
+    -o-transition all 0.3s ease
+    transition all 0.3s ease
+
+  .comment-form
+    display none
+    margin-top 25px
+
+  .comment-panel.edit
+    .comment-body
+      display none
+    .comment-form
+      display block
+
+  .count
+    font-size 12px
+    margin-bottom 10px
+
+  .comment-body
+    padding 10px 15px
+    background-color: white
+    border-radius: 5px
+    margin: 15px auto
+    .spam-message
+      display none
+    .more-link
+      margin-left 5px
+      line-height 38px
+      font-style italic
+      font-weight normal
+      font-size 13px
+
+  .comment-alias-from
+    font-size 80%
+    font-style italic
+    & > *
+      margin-right 7px
+    .title
+      font-weight bold
+    .avatar
+      height 30px
+      width 30px
+
+  .comment-actions
+    margin 12px auto
+
+    .btn-group
+      margin-left 0
+      margin-right 6px
+      &:last-of-type
+        margin-right 0
+
+    .btn-group > button
+      font-size 12px
+      font-weight normal
+      min-height 31px
+      min-width 31px
+      text-align center
+
+      .count
+        margin-right 4px
+
+      .fa
+        margin-right 5px
+        line-height 16px
+        padding-top 1px
+
+        &:last-child
+          margin-right 0
+          &.fa-caret-down, &.fa-caret-up
+            margin-left 0.5em
+          &.fa-trash-o
+            padding-top 0
+
+      &.static
+        padding 6px 12px
+        line-height 1.42857143
+        float left
+        cursor default
+
+      &.flag-comment.selected
+        font-weight bold
+        color #EF5350
+
+  .comment-counter
+    margin 0px
+    min-width 20px
+    display inline-block
+
+  .comment-action
+    color #333
+    font-size 11px
+    font-weight bold
+    text-decoration none
+    &.vote-comment
+      i
+        font-weight bold
+        font-size 20px
+        margin-right 10px
+    &.like
+      &.selected, &:hover
+        color green
+    &.dislike
+      &.selected, &:hover
+        color red
+    &.flag
+      display none
+      &.selected, &:hover
+        color orange
+    &.btn-remove, &.btn-reply-remove
+      &:hover
+        color #c0392b
+    &.btn-edit, &.btn-reply-edit
+      &:hover
+        color #f39c12
+    &.link-report,
+    &.link-remove,
+    &.link-edit
+      float right
+      color #333
+      i
+        margin-right 3px
+
+  .comment-reply
+    margin-top 4px
+    font-size 13px
+    .fa-reply
+      margin-right 4px
+
+  .comment-text
+    padding 6px
+    min-height 40px
+    color #333
+    word-break break-word
+    font-weight 300
+    font-size 16.5px
+    font-family 'Droid Serif', serif
+    p
+      font-weight 300
+      font-size 16px
+      margin-bottom 0
+    a
+      display inline
+      margin-bottom 12px
+    h1, h2, h3, h4
+      &:first-child
+        margin-top 0
+    h1
+      font-size 24px
+    h2
+      font-size 20px
+    h3
+      font-size 18px
+    h4
+      font-size 14px
+      text-transform uppercase
+      font-weight bold
+
+  .oncomment,
+  .onreply
+    background-color rgba(249, 249, 249, 0.9)
+    display none
+    font-weight bold
+    height 100%
+    left 0
+    padding-top 10px
+    position absolute
+    text-align center
+    top 0
+    width 100%
+
+    a
+      display inline-block
+      margin-right 12px
+
+    &.message
+      cursor default
+
+    .comment-action
+    &.like
+      &.selected, &:hover
+        color green
+    &.dislike
+      &.selected, &:hover
+        color red
+    &.flag
+      display none
+      &.selected, &:hover
+        color orange
+    &.btn-remove, &.btn-reply-remove
+      &:hover
+        color #c0392b
+    &.btn-edit, &.btn-reply-edit
+      &:hover
+        color #f39c12
+
+    &.error, &.loginrequired
+      a
+        margin-right 0
+
+  &.spam
+    .comment-text
+      display:none
+    .spam-message
+      display:block
+
+@media only screen and (min-width  320px) and (max-width  700px), screen and (-webkit-min-pixel-ratio  1.5), screen and (min-pixel-ratio  1.5)
+  .comment-item
+    .media-heading .comment-action,
+    .comment-reply
+        display inline-block
