@@ -9,7 +9,7 @@ mixin btn-new-comment
     h2
       i.fa.fa-comments &nbsp;
       =t('comments.arguments')
-      ul.categories
+    div(data-categories-container)
     - if (logged)
       ul.comments-nav.nav.nav-pills.nav-justified(role='tablist')
         li.new-comment(role='presentation')
