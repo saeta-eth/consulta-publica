@@ -20,49 +20,19 @@ tab_color = #909fa0
     max-width content_width
     min-height 5em
 
-    .filter-container, .form-toolbar
+    .filter-container
+      border-top 1px solid #C6C6C6
+      padding-top 15px
+      margin-top 15px
+      height 20px
+      
+    .form-toolbar
       margin-top 12px
       height 20px
 
     .media-list
       margin-top 10px
-
-    ul.comments-nav.nav-pills.nav-justified
-      li
-        display table-cell
-        width content_width
-
-        & > a
-          border-radius 0px
-          background-color tab_color
-          border-right 1px solid darken( tab_color , 30% )
-          color white
-          font-size 14px
-          padding 5px 0
-
-          transition all 0.3s ease
-
-          &:hover
-            background-color darken( tab_color , 30% )
-
-        &.active > a
-          background-color darken( tab_color , 30% )
-          box-shadow rgba(0,0,0,0.15) 0 3px 5px 0 inset
-        &:first-of-type > a
-          border-radius 4px 0px 0px 4px
-        &:last-of-type > a
-          border-radius 0px 4px 4px 0px
-          border-right none
-
-        &.new-comment
-          width 34px
-          a
-            background-color #EF5350
-            border-right none
-            padding 8px 10px 7px
-            &:hover
-              background-color darken(#EF5350, 40%)
-
+      
     form.comment-form
 
       .form-toolbar
@@ -73,9 +43,23 @@ tab_color = #909fa0
         .fa
           margin 0 6px
 
+      .help
+        font-size 12px
+        font-weight bold
+        .fa
+          margin 0 6px
+      
+      .category
+        font-size 19px
+        color #818181
+        margin 0 5px
+        text-transform uppercase
+        cursor pointer
+
       textarea
         width 100%
         padding 2%
+        margin-bottom 4px
       .form-submit
         background-color #484848
         color white
@@ -106,6 +90,66 @@ tab_color = #909fa0
     .signup-info
       margin 20px 10px
       font-size 14px
+      
+    .comments-header
+      display flex
+      flex-direction row
+      justify-content space-between
+      .comments-own
+        font-size 1.75em
+        margin-top 1.2em
+        margin-bottom 0.8em
+        p
+          display inline-block
+          font-size .5em
+          margin-right 10px
+          color #8F8F8F
+        .ui-switch 
+          display inline-block
+          width 50px
+          height 31px
+          position relative
+          input[type="checkbox"]
+            position absolute
+            top 0px
+            left 0px
+            width 100%
+            height 100%
+            z-index 100
+            opacity 0
+            outline medium none
+            margin 0px
+
+          input[type="checkbox"]:checked + .status 
+            background #4CD964 none repeat scroll 0% 0%
+
+          .status
+            top 8px 
+            left 0px
+            width 69%
+            height 14px
+            border-radius 27px
+            background #D0D2D3 none repeat scroll 0% 0%
+            cursor pointer
+            position relative
+            display inline-block
+
+          input[type="checkbox"]:checked + .status::before 
+            transform translate(70%, -5%)
+
+          .status::before 
+            content ""
+            display block
+            position absolute
+            top -2px
+            left 0px
+            height 20px
+            width 20px
+            background #FFF none repeat scroll 0% 0%
+            box-shadow 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 4px 11px 0px rgba(0, 0, 0, 0.08), -1px 3px 3px 0px rgba(0, 0, 0, 0.14)
+            transition transform 100ms ease 0s, -webkit-transform 100ms ease 0s
+            border-radius 50%
+            transform translate(-5%, -5%)
 
 @import './comments'
 @import './categories/styles'
