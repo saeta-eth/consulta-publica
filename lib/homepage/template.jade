@@ -1,6 +1,7 @@
 .homepage
   include ./cover/index
   if topics && topics.length
-    each topic in topics
-      include ./topic-card/template
+    .topics-container
+      each topic in topics
+        include ./topic-card/template
 include ../footer/index
