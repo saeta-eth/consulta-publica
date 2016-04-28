@@ -94,7 +94,7 @@
   "admin-users.list.search.placeholder": "Search user...",
   "admin-users.list.sort": "Sort / Filter",
   "admin-users.list.sort.date": "Signed up",
-  "admin-users.list.staff": "staff",
+  "admin-users.list.staff": "Staff",
   "admin-whitelist.actions": "Actions",
   "admin-whitelist.delete-whitelist.confirmation.body": "This action will erase data permanently. Would you like to proceed?",
   "admin-whitelist.delete-whitelist.confirmation.cancel": "Cancel",
