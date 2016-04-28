@@ -33,8 +33,15 @@
           span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
 
     h1=proposal.mediaTitle
-    - if (proposal.user)
-      h2.author=t('admin-topics-form.label.author') + ': ' + proposal.user.displayName
+    - if (proposal.author)
+      h2.author=t('admin-topics-form.label.author') + ': '
+        - if (proposal.authorUrl)
+          a(href=proposal.authorUrl, target='_blank')= proposal.author
+        - else
+          = proposal.author
+    //-
+      - if (proposal.user)
+        h2.author=t('admin-topics-form.label.author') + ': ' + proposal.user.displayName
     - if(proposal.keywords)
       ul.keywords
         - each keyword in proposal.keywords
