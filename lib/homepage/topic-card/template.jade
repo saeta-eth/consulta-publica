@@ -1,16 +1,17 @@
 .topic-container
   .topic-card
-    -if(topic.coverUrl)
+    - if (topic.coverUrl)
       .pic(style='background-image:url(' + topic.coverUrl + ')')
-    -if(topic.user)
-      .author
-        .author-img(style='background-image:url(' + topic.user.avatar + ')')
-        div
-          p Autor:&nbsp;
-            span=topic.user.displayName
-          -if(topic.user.party)
-            p Bloque:&nbsp;
-              span=topic.user.party
+    //-
+      - if (topic.user)
+        .author
+          .author-img(style='background-image:url(' + topic.user.avatar + ')')
+          div
+            p Autor:&nbsp;
+              span=topic.user.displayName
+            - if(topic.user.party)
+              p Bloque:&nbsp;
+                span=topic.user.party
     a.title(href=topic.url)=topic.mediaTitle
     p.participando
       strong=topic.participants.length
