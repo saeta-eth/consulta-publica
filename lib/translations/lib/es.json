@@ -88,15 +88,12 @@
   "admin-topics.list.search.placeholder": "Buscar un tema...",
   "admin-topics.list.sort": "Clase",
   "admin-topics.list.title": "Temas del sistema",
-<<<<<<< d74ee845d00171c9d94006b3eb125a5c747733f2
   "admin-users-form.disabled": "deshabilitado",
   "admin-users-form.enabled": "activo",
   "admin-users.list.add-tag": "Nuevo",
   "admin-users.list.search.placeholder": "Buscar...",
   "admin-users.list.sort": "Ordenar / Filtrar",
   "admin-users.list.sort.date": "Registrado",
-=======
->>>>>>> translate staff label
   "admin-users.list.staff": "Moderador",
   "admin-whitelist.actions": "Acciones",
   "admin-whitelist.delete-whitelist.confirmation.body": "Esta acción eliminará la información de manera permanente. ¿Desea continuar?",
