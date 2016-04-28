@@ -51,10 +51,11 @@ tab_color = #909fa0
       
       .category
         font-size 19px
-        margin 0 5px
+        margin 5px
         text-transform uppercase
         cursor pointer
         color #818181
+        display inline-block
 
       textarea
         width 100%
@@ -150,6 +151,13 @@ tab_color = #909fa0
             transition transform 100ms ease 0s, -webkit-transform 100ms ease 0s
             border-radius 50%
             transform translate(-5%, -5%)
+
+@media only screen and (max-width 500px)
+  .comments-own
+    p
+      max-width 80px
+    .ui-switch
+      top -17px
 
 @import './comments'
 @import './categories/styles'
