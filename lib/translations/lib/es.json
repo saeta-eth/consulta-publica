@@ -388,5 +388,10 @@
   "validators.min-length.singular": "Debe tener al menos 1 caracter",
   "validators.not.match": "No coinciden",
   "validators.password.not.match": "Las contraseñas no coinciden",
-  "validators.required": "Requerido"
+  "validators.required": "Requerido",
+
+  "richtext.toolbar.anotation": "Anotación",
+  "richtext.toolbar.paragraph": "Párrafo",
+  "richtext.toolbar.title": "Título",
+  "richtext.toolbar.section": "Sección"
 }
