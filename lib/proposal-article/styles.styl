@@ -50,11 +50,34 @@ article.proposal
   .clauses
     margin-top 20px
 
-    .clause
-      margin-bottom 20px
-      word-wrap break-word
-      img
-        width 100%
+  .clause
+    margin-bottom 20px
+    word-wrap break-word
+
+    img
+      width 100%
+
+  .clause-section-title
+    cursor pointer
+    border-bottom 1px solid #ddd
+
+    &.active
+      &::after
+        transform unquote('rotate(.5turn)')
+
+    &::after
+      content '\e114'
+      display inline-block
+      margin-left 6px
+      font-family 'Glyphicons Halflings'
+      font-size 12px
+      transition all .3s ease-in-out
+
+  .clause-section-text
+    display none
+
+    &.active
+      display block
 
   h2.author
     color #666
