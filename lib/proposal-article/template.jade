@@ -49,11 +49,11 @@
     h3=proposal.title
     .entry-content
       .clauses
-        - var clauses = proposal.clauses
         each clause, i in clauses
           - var classes = ['clause']
-          - classes.push(clause.empty ? 'hide' : 'commentable-section')
-          !=toHTML(clause, { className: classes, iframeResponsive: true })
+          - if (clause.commentable) classes.push('commentable-section')
+          - if (clause.isSectionTitle) classes.push('section-title')
+          != toHTML(clause, { className: classes, iframeResponsive: true })
 
     //- Article source
     - if (proposal.source)
