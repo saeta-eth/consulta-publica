@@ -273,6 +273,10 @@
   "proposal-options.votes-cast": "{num} votos contados",
   "proposal-options.yea": "Afirmativo",
   "resend-validation-email-form.error.email-not-valid.no-link": "La dirección de correo electrónico no ha sido validada. A cada usuario se le envía un correo electrónico de bienvenida al momento de registrarse. El siguiente paso es abrir el correo electrónico que te hemos enviado (no te olvides de la carpeta 'Correo no deseado') y haz clic en el enlace suministrado.",
+  "richtext.toolbar.anotation": "Anotación",
+  "richtext.toolbar.paragraph": "Párrafo",
+  "richtext.toolbar.section": "Sección",
+  "richtext.toolbar.title": "Título",
   "settings-forums.delete.confirmation.body": "Una vez eliminada, no hay vuelta atrás. Por favor asegúrate de entender las consecuencias de lo que estás por hacer.",
   "settings-forums.delete.confirmation.button-confirm": "Entiendo las consecuencias, eliminar esta democracia",
   "settings-forums.delete.confirmation.instructions": "Por favor ingrese el nombre de su democracia (<strong>{domain}</strong>) para confirmar.",
@@ -388,10 +392,5 @@
   "validators.min-length.singular": "Debe tener al menos 1 caracter",
   "validators.not.match": "No coinciden",
   "validators.password.not.match": "Las contraseñas no coinciden",
-  "validators.required": "Requerido",
-
-  "richtext.toolbar.anotation": "Anotación",
-  "richtext.toolbar.paragraph": "Párrafo",
-  "richtext.toolbar.title": "Título",
-  "richtext.toolbar.section": "Sección"
+  "validators.required": "Requerido"
 }
