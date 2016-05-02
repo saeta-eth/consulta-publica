@@ -53,7 +53,7 @@
           - var classes = ['clause']
           - if (clause.commentable) classes.push('commentable-section')
           - if (clause.isSectionTitle) classes.push('clause-section-title')
-          - if (clause.isSectionText) classes.push('clause-section-text', 'hide')
+          - if (clause.isSectionText) classes.push('clause-section-text')
           != toHTML(clause, {className: classes, iframeResponsive: true, dataset: clause.dataset})
 
     //- Article source
