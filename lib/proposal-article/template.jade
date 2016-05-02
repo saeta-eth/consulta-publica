@@ -1,4 +1,4 @@
-- var closed = proposal.closed
+- var closed = topic.closed
 - var logged = user.logged()
 .inner-container
   - var learnMore = config.learnMoreUrl
@@ -20,64 +20,65 @@
     //-   a.meta-item.meta-location(href="#") Buenos Aires, Argentina
     //-   small.meta-item.meta-timeago 10 days left
 
-    .entry-tag(style="border-color: #{proposal.tag.color}")
+    .entry-tag(style="border-color: #{topic.tag.color}")
       .entry-icon
-        i.fa(class=tagImages[proposal.tag.image].url, style="color: #{proposal.tag.color}")
-      span(style="color: #{proposal.tag.color}")= proposal.tag.name
+        i.fa(class=tagImages[topic.tag.image].url, style="color: #{topic.tag.color}")
+      span(style="color: #{topic.tag.color}")= topic.tag.name
 
-    - if (proposal.closingAt)
+    - if (topic.closingAt)
       .meta-information
         p
           i.glyphicon.glyphicon-time
           span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
-          span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
+          span.meta-item.meta-timeago.ago(data-time=topic.closingAt.toString())
 
-    h1=proposal.mediaTitle
-    - if (proposal.author)
+    h1=topic.mediaTitle
+    - if (topic.author)
       h2.author=t('admin-topics-form.label.author') + ': '
-        - if (proposal.authorUrl)
-          a(href=proposal.authorUrl, target='_blank')= proposal.author
+        - if (topic.authorUrl)
+          a(href=topic.authorUrl, target='_blank')= topic.author
         - else
-          = proposal.author
+          = topic.author
     //-
-      - if (proposal.user)
-        h2.author=t('admin-topics-form.label.author') + ': ' + proposal.user.displayName
-    - if(proposal.keywords)
+      - if (topic.user)
+        h2.author=t('admin-topics-form.label.author') + ': ' + topic.user.displayName
+    - if(topic.keywords)
       ul.keywords
-        - each keyword in proposal.keywords
+        - each keyword in topic.keywords
           li='#'+keyword
-    h3=proposal.title
+    h3=topic.title
     .entry-content
       .clauses
         each clause, i in clauses
           - var classes = ['clause']
           - if (clause.commentable) classes.push('commentable-section')
-          - if (clause.isSectionTitle) classes.push('section-title')
-          != toHTML(clause, { className: classes, iframeResponsive: true })
+          - if (clause.isSectionTitle) classes.push('clause-section-title')
+          - if (clause.isSectionText) classes.push('clause-section-text', 'hide')
+          != toHTML(clause, {className: classes, iframeResponsive: true, dataset: clause.dataset})
 
     //- Article source
-    - if (proposal.source)
+    - if (topic.source)
       .source
         p
           span.glyphicon.glyphicon-link
-          a(target="_blank", href="#{proposal.source}")
+          a(target="_blank", href="#{topic.source}")
            | #{t('proposal-article.view-original-text')}
 
     //- Article links
-    - if (proposal.links && proposal.links.length)
+    - if (topic.links && topic.links.length)
       .links
         h5=t('common.more-information')
-        - each link in proposal.links
+        - each link in topic.links
           p
             span.glyphicon.glyphicon-share
             a(target="_blank", href=link.url)=link.text
 
     //- Article participants
-    .participants(class=proposal.votable ? '' : 'hide')
+    .participants(class=topic.votable ? '' : 'hide')
       //- Rendered by participants view
 
     //- Article share links
-    - var text = config.tweetText || proposal.mediaTitle
+    - var text = config.tweetText || topic.mediaTitle
     .share-links
-      a(target="_blank", href="http://www.facebook.com/sharer.php?u=#{baseUrl}/topic/#{proposal.id}").flaticon.social.facebook
-      a(target="_blank", href="http://twitter.com/share?text=#{text}&url=#{baseUrl}/topic/#{proposal.id}").flaticon.social.twitter
+      a(target="_blank", href="http://www.facebook.com/sharer.php?u=#{baseUrl}/topic/#{topic.id}").flaticon.social.facebook
+      a(target="_blank", href="http://twitter.com/share?text=#{text}&url=#{baseUrl}/topic/#{topic.id}").flaticon.social.twitter
