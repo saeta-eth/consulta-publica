@@ -1,3 +1,5 @@
+#!/usr/bin/env
+
 var config = require('lib/config')
 var server = require('lib/server')
 var log = require('debug')('democracyos:root')
