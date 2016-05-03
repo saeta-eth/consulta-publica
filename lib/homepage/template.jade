@@ -2,7 +2,7 @@
   include ./cover/index
   if topics && topics.length
 
-    .topics-copy
+    .topics-copy#propuestas
       h2
         | Estos son nuestros compromisos.
       p
@@ -11,4 +11,4 @@
     .topics-container
       each topic in topics
         include ./topic-card/template
-include ../footer/index
+  include ../footer/index
