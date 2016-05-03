@@ -1,7 +1,14 @@
 .homepage
   include ./cover/index
   if topics && topics.length
+
+    .topics-copy#propuestas
+      h2
+        | Estos son nuestros compromisos.
+      p
+        | Mirá cada una de las iniciativas en las cuales estamos trabajando actualmente y dejanos tu opinión.
+
     .topics-container
       each topic in topics
         include ./topic-card/template
-include ../footer/index
+  include ../footer/index
