@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env node
 
 var config = require('lib/config')
 var server = require('lib/server')
