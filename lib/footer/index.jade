@@ -4,24 +4,22 @@ footer
       a(href='http://www.argentina.gob.ar/')
         img(src='/boot/argentinagob.svg')
     nav.menu
-      a(href='#')
-        p Términos y condiciones
-      a(href='#')
-        p Link
+      - if (config.termsOfService)
+        a(href="/help/terms-of-service")= t('help.tos.title')
+      - if (config.privacyPolicy)
+        a(href="/help/privacy-policy")= t('help.pp.title')
       - if (config.organizationEmail)
         .help
           a(href='mailto:' + config.organizationEmail)
             p=config.organizationEmail
+
       //- - if (config.aboutUs)
       //-   a(href="/help/about-us")= t('help.about-us.title')
       //- - if (config.frequentlyAskedQuestions)
       //-   a(href="/help/faq")= t('help.faq.title')
-      //- - if (config.termsOfService)
-      //-   a(href="/help/terms-of-service")= t('help.tos.title')
-      //- - if (config.privacyPolicy)
-      //-   a(href="/help/privacy-policy")= t('help.pp.title')
       //- - if (config.glossary)
       //-   a(href="/help/glossary")= t('help.glossary.title')
+
     .logo
       .redes
         a(href='https://github.com/DemocracyOS/app')
