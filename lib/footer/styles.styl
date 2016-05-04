@@ -1,19 +1,21 @@
-.footer
-  display flex
-  flex-direction column
-  flex-wrap wrap
-  justify-content center
-  align-self baseline
+footer
   padding 40px 15px
   margin-top 30px
   font-size .8em
   background-color #fff
 
+  .footer
+    max-width 1180px
+    margin 0 auto
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+    align-content center
+    align-items flex-start
+
   a
     color #0273ba
-
-  .logo
-    align-self center
 
     a
       color inherit
@@ -22,11 +24,32 @@
     img
       max-width 100%
       width 180px
+      margin-top 8px
+
+  .logo
+    span
+      display block
+      color #aaa
+
+    .redes
+      margin-bottom 10px
+      img
+        width 25px
+        max-width 100%
+        opacity .3
+        &:hover
+          opacity 1
+
+  .gob
+    img
+      max-width 100%
+      width 250px
 
   .menu
-    flex-grow 2
     text-align center
-    margin-top 12px
+    text-align left
+    text-transform uppercase
+    padding-right 40px
 
     a
       margin 0 5px
