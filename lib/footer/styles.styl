@@ -1,19 +1,21 @@
-.footer
-  display flex
-  flex-direction column
-  flex-wrap wrap
-  justify-content center
-  align-self baseline
+footer
   padding 40px 15px
   margin-top 30px
   font-size .8em
   background-color #fff
 
+  .footer
+    max-width 1180px
+    margin 0 auto
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+    align-content center
+    align-items flex-start
+
   a
     color #0273ba
-
-  .logo
-    align-self center
 
     a
       color inherit
@@ -23,14 +25,47 @@
       max-width 100%
       width 180px
 
+  .logo
+    span
+      display block
+      color #aaa
+
+    .redes
+      margin-bottom 10px
+      img
+        width 25px
+        max-width 100%
+        opacity .3
+        &:hover
+          opacity 1
+
+  .gob
+    img
+      max-width 100%
+      width 250px
+
   .menu
-    flex-grow 2
-    text-align center
-    margin-top 12px
+    text-align left
+    text-transform uppercase
+    padding-right 40px
 
     a
       margin 0 5px
       padding-top 10px
 
-  .help
-    text-align center
+  @media only screen and (max-width: 687px)
+    .footer
+      flex-direction column
+      flex-wrap wrap
+      padding 0 10px
+
+    .menu
+      padding-right 0
+      margin 30px 0
+      a
+        display block
+        line-height 1em
+
+    .gob
+      img
+        width 300px
