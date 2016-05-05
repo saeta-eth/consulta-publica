@@ -46,7 +46,6 @@ footer
       width 250px
 
   .menu
-    text-align center
     text-align left
     text-transform uppercase
     padding-right 40px
@@ -55,5 +54,19 @@ footer
       margin 0 5px
       padding-top 10px
 
-  .help
-    text-align center
+  @media only screen and (max-width: 687px)
+    .footer
+      flex-direction column
+      flex-wrap wrap
+      padding 0 10px
+
+    .menu
+      padding-right 0
+      margin 30px 0
+      a
+        display block
+        line-height 1em
+
+    .gob
+      img
+        width 300px
