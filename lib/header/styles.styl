@@ -1,27 +1,9 @@
-/* Vars
--------------------------------------------------- */
-header_height = 64px
-spacing = 20px
 
 /* Header
 -------------------------------------------------- */
-header.app-header, aside.nav-proposal, .site-content, .site-content.loading-lock
+
+.app-header
   position fixed
-
-.site-content.content-pinned
-aside.nav-proposal.content-pinned
-  transition transform 200ms linear
-  padding-top 0
-
-.site-content
-  z-index 1
-  overflow-y scroll
-  background transparent
-
-#content.site-content
-  overflow-y auto
-
-header.app-header
   z-index 20
   top 0
   left 0
@@ -36,6 +18,10 @@ header.app-header
 
   &.with-contrast
     box-shadow 0 2px 2px rgba(0, 0, 0, 0.3)
+
+  .header-container
+    display flex
+    justify-content space-between
 
   #toggleButton
     width 26px
@@ -54,10 +40,11 @@ header.app-header
      &:hover
        color white
 
-  h1
+  #logo
     display inline-block
     width 300px
-    margin-top 18px
+    margin 21px 0 0
+
     a
       font-weight normal
       text-transform initial
@@ -69,43 +56,21 @@ header.app-header
     position relative
     top -7px
 
-  .user-nav
-    display inline-block
+.user-nav
+  display inline-block
+  list-style none
+  margin-right spacing
+
+  .user
     float right
-    list-style none
-    margin-right spacing
-    position absolute
-    right 0
-    top 0px
 
-    .user
-      float right
+  .link
+    padding 26px 12px
+    display inline-block
+    line-height 1.8
 
-    .link
-      padding 6px 12px
-      display inline-block
-      margin-top 15px
-      line-height 1.8
-
-      i
-        display none
-        font-size 20px
-      &:hover
-        text-decoration none
-
-vendors(prop, args, fn = null)
-  val = fn == null ? args : fn + '(' + args + ')'
-  -moz-{prop} val
-  -webkit-{prop} val
-  -o-{prop} val
-  -ms-{prop} val
-  {prop} val
-
-.headroom
-  vendors(transition, all 200ms linear)
-
-.headroom--pinned
-  vendors(transform, 0%, translateY)
-
-.headroom--unpinned
-  vendors(transform, -100%, translateY)
+    i
+      display none
+      font-size 20px
+    &:hover
+      text-decoration none
