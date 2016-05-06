@@ -3,8 +3,11 @@
 li(data-id=item.id, class=active ? 'active' : '')
   a(href=item.url, class=voted ? 'voted' : '')
     .item-tag
-      .item-icon
-        i.fa(class=tagImages[item.tag.image].url)
+      - if (item.coverUrl)
+        .pic(style='background-image:url(' + item.coverUrl + ')')
+      - else
+        .item-icon
+          i.fa(class=tagImages[item.tag.image].url)
 
     .item-badges
       if voted
