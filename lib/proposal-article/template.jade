@@ -21,6 +21,8 @@
     //-   small.meta-item.meta-timeago 10 days left
 
     .entry-tag(style="border-color: #{topic.tag.color}")
+      //- .entry-icon
+      //-   i.fa(class=tagImages[topic.tag.image].url, style="color: #{topic.tag.color}")
       span(style="color: #{topic.tag.color}")= topic.tag.name
 
     - if (topic.closingAt)
