@@ -3,8 +3,11 @@
 li(data-id=item.id, class=active ? 'active' : '')
   a(href=item.url, class=voted ? 'voted' : '')
     .item-tag
-      .item-icon
-        i.fa(class=tagImages[item.tag.image].url)
+      - if (item.coverUrl)
+        .pic(style='background-image:url(' + item.coverUrl + ')')
+      - else
+        .item-icon
+          i.fa(class=tagImages[item.tag.image].url)
 
     .item-badges
       if voted
@@ -18,6 +21,5 @@ li(data-id=item.id, class=active ? 'active' : '')
       //-   = item.participants.length + ' ' + t('proposal-article.participant.' + cardinality)
       if item.closingAt
         - var closed = item.closingAt && +new Date(item.closingAt) < Date.now()
-        // br
         span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + ' '
         span.meta-item.meta-timeago.ago(data-time=item.closingAt.toString())
