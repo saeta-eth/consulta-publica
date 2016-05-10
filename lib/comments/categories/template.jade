@@ -1,3 +1,15 @@
 ul.categories
+  li.active(data-category='', data-color='#7a7a7b')=t('comments.viewAll')
   each category in categories
-    li(data-category=category.name, data-color=category.color, style='color:'+category.color+'; border-color:'+category.color+';')=category.title
+    style(text="text/css").
+      [data-category="#{category.name}"]:hover:not(.active){
+        border-color: #{category.color};
+        color: #{category.color};
+      }
+      [data-category="#{category.name}"].active{
+        background: #{category.color};
+        border-color: #{category.color};
+        color: white;
+      }
+  each category in categories
+    li(data-category=category.name, data-color=category.color)=category.title
