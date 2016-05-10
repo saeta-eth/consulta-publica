@@ -130,7 +130,7 @@
   "comments.alias.title": "Alias",
   "comments.all": "Todos",
   "comments.argument-limited": "El comentario no puede exceder los 4096 caracteres",
-  "comments.arguments": "Comentario",
+  "comments.arguments": "Comentarios",
   "comments.arguments.confirm-remove": "¿Deseas eliminar este comentario?",
   "comments.arguments.reply": "Responder a este comentario",
   "comments.cannot-be-empty": "El comentario no puede estar vacío",

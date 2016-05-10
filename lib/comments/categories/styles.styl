@@ -4,11 +4,24 @@ ul.categories
   border-top 1px solid #D0D0D0
   li
     display inline-block
-    font-weight 300
+    font-weight 400
     border 1px solid
     border-radius 5px
-    padding 8px 18px
+    padding 8px 21px
     margin 5px
-    font-size 17px
+    font-size 14px
     cursor pointer
     text-transform uppercase
+    margin-right 15px
+
+@media only screen and (max-width 500px)
+  ul.categories
+    li
+      padding 8px 16px
+      margin-right 5px
+
+@media only screen and (max-width 320px)
+  ul.categories
+    li
+      width 96%
+      text-align center
