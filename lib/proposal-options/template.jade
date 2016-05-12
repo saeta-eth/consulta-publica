@@ -8,8 +8,7 @@
 - var closed = proposal.closingAt && +new Date(proposal.closingAt) < Date.now()
 - var voted = user && ~census.indexOf(user.id)
 
-.inner-container.commentable-container(class=proposal.votable ? '' : 'hide')
-
+.container.commentable-container(class=proposal.votable ? '' : 'hide')
   .proposal-options
     .vote-box
       div#voting-error.alert.alert-warning.hide #{t('proposal-options.error.voting')}.

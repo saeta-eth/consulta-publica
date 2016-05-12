@@ -1,30 +1,31 @@
-#header-container
-  a(href='#', id='toggleButton')
-    - var headerFontColor = config.headerFontColor || '#fff';
-    span.bar-icon(style='background-color: #{headerFontColor}')
-    span.bar-icon(style='background-color: #{headerFontColor}')
-    span.bar-icon(style='background-color: #{headerFontColor}')
+.container
+  #header-container.header-container
+    a(href='#', id='toggleButton')
+      - var headerFontColor = config.headerFontColor || '#0072BC';
+      span.bar-icon(style='background-color: #{headerFontColor}')
+      span.bar-icon(style='background-color: #{headerFontColor}')
+      span.bar-icon(style='background-color: #{headerFontColor}')
 
-    h1#logo
-      a(href=config.homeLink || '#{config.subPath}/')
-        - if (config.logo)
-          img(src=(config.subPath + config.logo)).logo-image.hidden-xs
-        - else if (config.organizationName)
-          span.hidden-xs= config.organizationName
-        - if (config.logoMobile)
-          img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
+      h1#logo
+        a(href=config.homeLink || '#{config.subPath}/')
+          - if (config.logo)
+            img(src=(config.subPath + config.logo)).logo-image.hidden-xs
+          - else if (config.organizationName)
+            span.hidden-xs= config.organizationName
+          - if (config.logoMobile)
+            img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
 
-  .user-nav.btn-group
-    .user
-    - var color = config.headerFontColor;
-    - var style = color ? 'color: ' + color : '';
-    - var signin = config.signinUrl || config.subPath.concat('/signin')
-    - var signup = config.signupUrl || config.subPath.concat('/signup')
-    a(href=signin, style=style).link.pull-right.anonymous-user
-      i.fa.fa-sign-in
-      span= t('header.signin')
-    a(href=signup, style=style).link.pull-right.anonymous-user
-      i.fa.fa-user
-      span= t('header.signup')
-    - if (config.aboutUs)
-      a.link.pull-right(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
+    .user-nav.btn-group
+      .user
+      - var color = config.headerFontColor;
+      - var style = color ? 'color: ' + color : '';
+      - var signin = config.signinUrl || config.subPath.concat('/signin')
+      - var signup = config.signupUrl || config.subPath.concat('/signup')
+      a(href=signin, style=style).link.pull-right.anonymous-user
+        i.fa.fa-sign-in
+        span= t('header.signin')
+      a(href=signup, style=style).link.pull-right.anonymous-user
+        i.fa.fa-user
+        span= t('header.signup')
+      - if (config.aboutUs)
+        a.link.pull-right(href="#{config.subPath}/help/about-us")= t('help.about-us.title')

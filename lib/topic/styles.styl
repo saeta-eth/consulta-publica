@@ -1,0 +1,17 @@
+.topics-show
+  #sidebar
+    display block
+
+  .site-content
+    padding-top header_height + 23px
+
+    .container
+      padding-left (sidebar_width + spacing * 4)
+
+  @media all and (max-width 991px)
+    .site-content
+      .container
+        padding-left spacing
+
+    #sidebar
+      display none

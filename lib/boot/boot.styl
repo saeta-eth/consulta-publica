@@ -24,11 +24,11 @@ html
   -webkit-font-smoothing antialiased
 
 body
-  color rgba(#000, .8)
-  overflow hidden
+  color #111
   font-size 16px
   line-height 1.4
   font-family 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  background-color #f5f5f5
 
 h1,
 h2,
@@ -225,7 +225,7 @@ label
   padding-right 20px
   max-width content_width
   margin auto
-  
+
 .small-container
   max-width 300px
   padding-left 10px
@@ -254,21 +254,8 @@ label
 
 /* Site Content Container
 -------------------------------------------------- */
-body.browser-page
-  background #f9fafc
-  section#content
-    display none
-
 section.site-content
-  background #f9fafc
   padding-top header_height
-  top 0
-  left nav_proposal_width
-  right 0
-  bottom 0
-  &#content
-    z-index 12
-    left 0
 
 /* Signin page
 -------------------------------------------------- */
@@ -280,19 +267,6 @@ section.site-content
       float:right
       a
         font-size 12px
-
-
-/* Sidebar
--------------------------------------------------- */
-aside.nav-proposal
-  margin-top header_height
-  top 0
-  left 0
-  bottom 0
-  width nav_proposal_width
-  overflow-y auto
-  background transparent
-  z-index 10
 
 /* Sidebar dropdown-department
 -------------------------------------------------- */

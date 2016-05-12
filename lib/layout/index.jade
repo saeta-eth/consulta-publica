@@ -33,18 +33,13 @@ html(lang='en')
 
   body
     block body
-      #snap-content.snap-content
-        //- Start of `Page Content`
-        - var color = config.headerBackgroundColor;
-        - var headerClassName = config.headerContrast ? 'with-contrast' : '';
-        header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
-        section#content.site-content
-          block content
-        section#browser.site-content
-          section.app-content
-
-      .snap-drawers
-        aside.nav-proposal
+      //- Start of `Page Content`
+      - var color = config.headerBackgroundColor;
+      - var headerClassName = config.headerContrast ? 'with-contrast' : '';
+      header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
+      .sidebar-container.container(data-sidebar-container)
+      section#content.site-content
+        block content
 
 
       //- End of `Page Content`

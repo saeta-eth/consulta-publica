@@ -4,8 +4,8 @@ mixin btn-new-comment
     i.fa.fa-plus
     span=t('comments.new.argument')
 
-.comments
-  .inner-container
+.comments.container
+  div
     h2
       i.fa.fa-comments &nbsp;
       =t('comments.arguments')
@@ -20,11 +20,11 @@ mixin btn-new-comment
         li(role='presentation')
           a(href='#user',aria-controls='user',role='tab',data-toggle='pill')
             = t('comments.your.arguments')
-    
+
     .filter-container
 
     .tab-content
-      .tab-pane.active#all.all-comments(role='tabpanel')    
+      .tab-pane.active#all.all-comments(role='tabpanel')
         +btn-new-comment
         ul.media-list.comments-list
         btn.btn.btn-block.btn-dashed.load-comments.hide
@@ -60,7 +60,7 @@ mixin btn-new-comment
               ul.form-messages
               input.btn.btn-success.form-submit.pull-right(type='submit', tabindex=5, value=t('comments.send'))
               a(tabindex=3).btn.btn-link.cancel-new-comment.pull-right=t('common.cancel')
-    
+
     - if (!logged)
       .signup-info
         p.text-mute= t('comments.sign-in-required')
@@ -69,4 +69,4 @@ mixin btn-new-comment
         | &nbsp;#{t('common.or')}&nbsp;
         - var signupUrl = config.subPath + '/signup?reference=' + reference
         a(href=signupUrl)= t('signin.signup')
-      
+
