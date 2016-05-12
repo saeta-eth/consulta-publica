@@ -5,7 +5,6 @@ tab_color = #909fa0
 /* Comments
 -------------------------------------------------- */
 .comments
-  background #f9f9f9
   padding-top 50px
   padding-bottom 50px
 
@@ -15,186 +14,181 @@ tab_color = #909fa0
   .lock-spinner
       background-color #f9f9f9
 
-  .inner-container
-    position relative
-    max-width content_width
-    min-height 5em
+  .filter-container
+    margin-top 15px
+    .comments-own
+      display inline-block
+      font-size 1.75em
 
-    .filter-container
-      margin-top 15px
-      .comments-own
+      p
         display inline-block
-        font-size 1.75em
-
-        p
-          display inline-block
-          font-size .5em
-          margin-right 10px
-          color #8F8F8F
-        .ui-switch
-          display inline-block
-          width 50px
-          height 31px
-          position relative
-          input[type="checkbox"]
-            position absolute
-            top 0px
-            left 0px
-            width 100%
-            height 100%
-            z-index 100
-            opacity 0
-            outline medium none
-            margin 0px
-
-          input[type="checkbox"]:checked + .status
-            background #3d699e none repeat scroll 0% 0%
-
-          .status
-            top 8px
-            left 0px
-            width 68%
-            height 14px
-            border-radius 27px
-            background #D0D2D3 none repeat scroll 0% 0%
-            cursor pointer
-            position relative
-            display inline-block
-
-          input[type="checkbox"]:checked + .status::before
-            transform translate(70%, -5%)
-
-          .status::before
-            content ""
-            display block
-            position absolute
-            top -2px
-            left 0px
-            height 20px
-            width 20px
-            background #FFF none repeat scroll 0% 0%
-            box-shadow 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 4px 11px 0px rgba(0, 0, 0, 0.08), -1px 3px 3px 0px rgba(0, 0, 0, 0.14)
-            transition transform 100ms ease 0s, -webkit-transform 100ms ease 0s
-            border-radius 50%
-            transform translate(-5%, -5%)
-
-    .form-toolbar
-      margin-top 12px
-      height 20px
-
-    .media-list
-      margin-top 30px
-
-    .new-comment
-      background-color #eee
-      color #0273ba
-      border-radius 5px
-      cursor pointer
-      width 100%
-      text-align center
-      padding 20px 0
-      position absolute
-      left 0
-      transition opacity 0.5s ease
-
-    .new-comment:hover
-      color #fff
-      background-color #0273ba
-
-    form.comment-form
-      position relative
-      .form-group
-        transition opacity 0.5s ease
-      .form-toolbar
-        margin-left 10px
-        margin-bottom 5px
-        font-size 12px
-        font-weight bold
-        .fa
-          margin 0 6px
-      .help
-        font-size 12px
-        font-weight bold
-        .fa
-          margin 0 6px
-      .category
-        font-size 14px
-        margin 5px
-        margin-right 20px
-        text-transform uppercase
-        cursor pointer
-        color #818181
+        font-size .5em
+        margin-right 10px
+        color #8F8F8F
+      .ui-switch
         display inline-block
-        @media screen and (max-width: 320px)
-          display block
-          margin 8px 0
-          font-size .9em
-
-        .active
-          font-weight 700
-      .radio-category
+        width 50px
+        height 31px
         position relative
-        top 0
-        margin-right 5px
-        width 14px
-        height 14px
+        input[type="checkbox"]
+          position absolute
+          top 0px
+          left 0px
+          width 100%
+          height 100%
+          z-index 100
+          opacity 0
+          outline medium none
+          margin 0px
 
-      textarea
-        width 100%
-        padding 2%
-        margin-bottom 4px
-        height 100px
-      .btn-cgy
-        background-color #777
-        color white
-        font-size 13px
-        text-transform uppercase
-        padding 7px 25px
-        font-size 12px
-        border-radius 3px
-        margin 0 5px
-        &:hover
-          background-color #3d699e
-        &.cancel
-          background-color transparent
-          color #777
-          &:hover
-            color #3d699e
-      .form-messages
-        color red
-        display block
-      span.error
-        top 6px
-        color red
-        display block
+        input[type="checkbox"]:checked + .status
+          background #3d699e none repeat scroll 0% 0%
 
-      .comment-form
-        .form-group
-          label
-            margin: 5px 10px
-            font-size 12px
-            font-weight bold
-            display inline-block
+        .status
+          top 8px
+          left 0px
+          width 68%
+          height 14px
+          border-radius 27px
+          background #D0D2D3 none repeat scroll 0% 0%
+          cursor pointer
+          position relative
+          display inline-block
 
-    .btn-block
-      margin-bottom: 15px
-      span
-        text-align left
-        display inline-block
+        input[type="checkbox"]:checked + .status::before
+          transform translate(70%, -5%)
 
-    .signup-info
-      margin 20px 10px
+        .status::before
+          content ""
+          display block
+          position absolute
+          top -2px
+          left 0px
+          height 20px
+          width 20px
+          background #FFF none repeat scroll 0% 0%
+          box-shadow 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 4px 11px 0px rgba(0, 0, 0, 0.08), -1px 3px 3px 0px rgba(0, 0, 0, 0.14)
+          transition transform 100ms ease 0s, -webkit-transform 100ms ease 0s
+          border-radius 50%
+          transform translate(-5%, -5%)
+
+  .form-toolbar
+    margin-top 12px
+    height 20px
+
+  .media-list
+    margin-top 30px
+
+  .new-comment
+    background-color #eee
+    color #0273ba
+    border-radius 5px
+    cursor pointer
+    width 100%
+    text-align center
+    padding 20px 0
+    position absolute
+    left 0
+    transition opacity 0.5s ease
+
+  .new-comment:hover
+    color #fff
+    background-color #0273ba
+
+  form.comment-form
+    position relative
+    .form-group
+      transition opacity 0.5s ease
+    .form-toolbar
+      margin-left 10px
+      margin-bottom 5px
+      font-size 12px
+      font-weight bold
+      .fa
+        margin 0 6px
+    .help
+      font-size 12px
+      font-weight bold
+      .fa
+        margin 0 6px
+    .category
       font-size 14px
+      margin 5px
+      margin-right 20px
+      text-transform uppercase
+      cursor pointer
+      color #818181
+      display inline-block
+      @media screen and (max-width: 320px)
+        display block
+        margin 8px 0
+        font-size .9em
 
-    .comments-header
-      display flex
-      flex-direction row
-      justify-content space-between
-      h3
-        font-size 2em
-        color #111
-        margin-bottom .8em
-        margin-top 0
+      .active
+        font-weight 700
+    .radio-category
+      position relative
+      top 0
+      margin-right 5px
+      width 14px
+      height 14px
+
+    textarea
+      width 100%
+      padding 2%
+      margin-bottom 4px
+      height 100px
+    .btn-cgy
+      background-color #777
+      color white
+      font-size 13px
+      text-transform uppercase
+      padding 7px 25px
+      font-size 12px
+      border-radius 3px
+      margin 0 5px
+      &:hover
+        background-color #3d699e
+      &.cancel
+        background-color transparent
+        color #777
+        &:hover
+          color #3d699e
+    .form-messages
+      color red
+      display block
+    span.error
+      top 6px
+      color red
+      display block
+
+    .comment-form
+      .form-group
+        label
+          margin: 5px 10px
+          font-size 12px
+          font-weight bold
+          display inline-block
+
+  .btn-block
+    margin-bottom: 15px
+    span
+      text-align left
+      display inline-block
+
+  .signup-info
+    margin 20px 10px
+    font-size 14px
+
+  .comments-header
+    display flex
+    flex-direction row
+    justify-content space-between
+    h3
+      font-size 2em
+      color #111
+      margin-bottom .8em
+      margin-top 0
 
 @media only screen and (max-width 500px)
   .comments .inner-container .media-list
@@ -219,7 +213,32 @@ tab_color = #909fa0
     .ui-switch
       top -1px
 
-@import './comments'
+.deleted-list
+  margin-top 10px
+
+form
+  &.comment-form
+    .category-select
+      font-size 1.4em
+      font-weight 400
+      color #777
+      @media screen and (max-width: 320px)
+        font-size 1.2em
+    .form-submit
+      float left
+    .help-text
+      &.form-errors
+        color red
+        display none
+        float left
+        height 32px
+        line-height 32px
+        margin-left 6px
+    &.has-error
+      .help-text
+        &.form-errors
+          display block
+
 @import './categories/styles'
 @import './filter/styles'
 @import './card/styles'
