@@ -3,15 +3,14 @@
 -------------------------------------------------- */
 
 .app-header
-  position fixed
+  position absolute
   z-index 20
   top 0
   left 0
   right 0
   height header_height
-  background #64476e
+  background #fff
   color white
-  padding-left spacing
   font-weight bold
   text-transform uppercase
   font-size 12px
@@ -20,10 +19,13 @@
     box-shadow 0 2px 2px rgba(0, 0, 0, 0.3)
 
   .header-container
+    position relative
+    max-width 100%
     display flex
     justify-content space-between
 
   #toggleButton
+    display none !important
     width 26px
     height 64px
     position absolute
@@ -35,14 +37,15 @@
       margin-bottom 5px
       display block
 
-  a
-     color white
-     &:hover
-       color white
+  .btn
+    color #0072BC
+
+    &:hover
+      color #fff
+      background #0072BC
 
   #logo
     display inline-block
-    width 300px
     margin 21px 0 0
 
     a
@@ -52,14 +55,14 @@
 
   img.logo-image
     display inline-block
-    height 43px
+    height 50px
     position relative
-    top -7px
+    top -11px
+    max-width 100%
 
 .user-nav
   display inline-block
   list-style none
-  margin-right spacing
 
   .user
     float right
@@ -72,5 +75,6 @@
     i
       display none
       font-size 20px
+
     &:hover
       text-decoration none

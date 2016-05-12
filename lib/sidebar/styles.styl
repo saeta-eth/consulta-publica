@@ -1,13 +1,18 @@
+.sidebar-container
+  position relative
+
 #sidebar
   display none
   position absolute
-  left 0
-  top header_height
+  left spacing
+  top header_height + 23px
   max-width 100%
-  width 320px
+  width 100%
+  max-width sidebar_width
 
-  .topics-show &
-    display block
+  .sidebar-title
+    margin 30px 0 15px
+    color #767676
 
   @import './filter/styles'
   @import './list/styles'

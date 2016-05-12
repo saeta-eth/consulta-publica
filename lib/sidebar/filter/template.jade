@@ -7,19 +7,20 @@
     a.btn.btn-default(data-status='closed', class=(filter.status === 'closed' ? 'active' : ''))
       = formatNumber(closedCount) + t('sidebar.closed')
 
-  .sidebar-filter-sort.btn-group
-    button.btn.btn-default.current-department(type='button', data-sort-btn)
-      span.pull-left= t(currentSort.label)
-      span.caret
-    ul.dropdown-list
-      each sort, name in sorts
-        - var active = name == currentSort.name
-        li(data-sort=name, class= active ? 'active' : '')
-          a(href='#')= t(sort.label)
+  //-
+    .sidebar-filter-sort.btn-group
+      button.btn.btn-default.current-department(type='button', data-sort-btn)
+        span.pull-left= t(currentSort.label)
+        span.caret
+      ul.dropdown-list
+        each sort, name in sorts
+          - var active = name == currentSort.name
+          li(data-sort=name, class= active ? 'active' : '')
+            a(href='#')= t(sort.label)
 
-  .sidebar-filter-hide-voted(class=user.logged() ? '' : 'hide')
-    input#hide-voted(type='checkbox',
-      name='hide-voted',
-      checked= filter.hideVoted,
-      data-hide-voted)
-    label.inline(for='hide-voted')= t('sidebar.hide-voted')
+    .sidebar-filter-hide-voted(class=user.logged() ? '' : 'hide')
+      input#hide-voted(type='checkbox',
+        name='hide-voted',
+        checked= filter.hideVoted,
+        data-hide-voted)
+      label.inline(for='hide-voted')= t('sidebar.hide-voted')
