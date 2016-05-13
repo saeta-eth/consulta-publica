@@ -5,14 +5,12 @@ border_radius = 2px
 /* Topic view
 -------------------------------------------------- */
 article.proposal
-  min-height 300px
   position relative
+  margin-top spacing * 2
+  min-height 300px
 
   .entry-content
-    font-size 16.5px
-    line-height 1.6
-    font-weight 300
-    font-family inherit
+    margin-bottom spacing * 4
 
   a:hover
     color #3d699e
@@ -22,8 +20,8 @@ article.proposal
     max-width 100%
 
   h1
-    margin-top spacing * 2
-    font-weight 700
+    margin-top 0
+    margin-bottom 12px
 
   .entry-tag
     display none
@@ -61,6 +59,11 @@ article.proposal
     cursor pointer
     border-bottom 1px solid #ddd
 
+    span
+      font-size 20px
+      font-weight 700
+      padding-bottom 5px
+
     &.active
       &::after
         transform unquote('rotate(.5turn)')
@@ -79,16 +82,16 @@ article.proposal
     &.active
       display block
 
-  h2.author
+  .author
     color #666
-    font-size 20px
-    font-weight normal
-    margin 0
+    font-size 18px
+    font-weight 400
+    margin 0 0 15px
 
   .meta-information
-    margin-bottom 10px
-    color #666
-    font-size 20px
+    color #999
+    font-size 16px
+    margin-bottom 15px
 
     .glyphicon-time
       margin-right 6px
@@ -102,16 +105,21 @@ article.proposal
       margin-right 10px
       border-radius 0
 
+    p
+      margin 0
+
   .keywords
     padding 0
-    margin-top 20px
+    margin-bottom 20px
+
     li
+      font-size 12px
       display inline-block
-      margin 10px 15px 0px 0px
+      margin 0 15px 10px 0
       padding 7px 10px
-      border 1px solid #777
+      border 1px solid #bbb
       border-radius 4px
-      color #777
+      color #aaa
 
   hr
     border-top 4px solid #eee
@@ -166,9 +174,14 @@ article.proposal
   .share-links
     margin 30px auto 50px
     text-align center
+
     p
+      text-align center
+      display block
+      margin-bottom 8px
       font-size .8em
       color #9a9a9a
+
     a
       background transparent
       padding 10px
@@ -179,11 +192,15 @@ article.proposal
       display inline-block
       line-height 10px
       -webkit-transition all 0.3s ease
+
       &:hover
         text-decoration none
       &.flaticon:hover
         background #0072bc
         color white
+
+      &:last-child
+        margin-right 0
 
 .embed-container
   position relative
