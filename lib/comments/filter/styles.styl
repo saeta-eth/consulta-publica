@@ -1,6 +1,7 @@
 .comments-filter
   float right
   position relative
+  margin 6px 0
 
   &.active
     .dropdown-list
@@ -17,6 +18,11 @@
     text-align center
     text-transform none
     padding 0 20px 0 10px
+
+  @media all and (max-width 320px)
+    float left
+    .btn
+      padding-left 0
 
     .caret
       color #3d699e

@@ -1,0 +1,41 @@
+ul.categories
+  padding 20px 0 0
+  margin 20px 0
+  border-top 1px solid #D0D0D0
+  p
+    font-size 14px
+    margin 0 0 10px 0
+    color #8f8f8f
+  li
+    display inline-block
+    font-weight 400
+    border 1px solid #ABABAB
+    color #ABABAB
+    background transparent
+    border-radius 5px
+    padding 9px 20px
+    margin 5px
+    font-size 13px
+    cursor pointer
+    text-transform uppercase
+    margin-right 10px
+  [data-category=""]:hover
+    border-color #7a7a7b
+    color #7a7a7b
+  
+  [data-category=""].active
+    background #7a7a7b
+    border-color #7a7a7b
+    color white
+
+@media only screen and (max-width 500px)
+  ul.categories
+    li
+      padding 8px 16px
+      margin-right 5px
+
+@media only screen and (max-width 320px)
+  ul.categories
+    li
+      width 96%
+      text-align center
