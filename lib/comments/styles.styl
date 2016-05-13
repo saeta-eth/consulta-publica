@@ -18,6 +18,8 @@ tab_color = #909fa0
     margin-top 15px
     .comments-own
       display inline-block
+      font-size 1.75em
+
       p
         display inline-block
         font-size 14px
@@ -113,9 +115,10 @@ tab_color = #909fa0
       .fa
         margin 0 6px
     .category
+      display inline-block
+      display inline-flex
       margin 0 20px 0 0
       cursor pointer
-      display inline-flex
       align-items center
       cursor pointer
 
@@ -127,6 +130,7 @@ tab_color = #909fa0
       input[type="radio"]
         cursor inherit
 
+
       label
         font-size 14px
         text-transform uppercase
@@ -134,15 +138,18 @@ tab_color = #909fa0
         display inline-block
         font-weight 100
         margin 0
-        cursor inherit
-        line-height 1
 
+      .active
+        font-weight 700
       .radio-category
         position relative
+        top 2px
         margin 0 5px 0 0
         height 14px
+        cursor inherit
         line-height 1
         font-size 14px
+
 
       @media screen and (max-width: 320px)
         display block

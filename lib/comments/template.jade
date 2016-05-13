@@ -12,7 +12,6 @@
         input(type='hidden', name='category')
         each category in categories
           span.category(data-category=category.value, style='color: #{category.color}')
-
             input.radio-category(type='radio', name='category-radio', id='cat_#{category.value}')
             label.category-label(for='cat_#{category.value}')=category.label
       .form-group
