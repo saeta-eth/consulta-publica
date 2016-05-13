@@ -1,15 +1,16 @@
 ul.categories
+  p=t('comments.filter')
   li.active(data-category='', data-color='#7a7a7b')=t('comments.viewAll')
   each category in categories
     style(text="text/css").
-      [data-category="#{category.name}"]:hover:not(.active){
+      .categories [data-category="#{category.name}"]:hover:not(.active) {
         border-color: #{category.color};
         color: #{category.color};
       }
-      [data-category="#{category.name}"].active{
+      .categories [data-category="#{category.name}"].active {
         background: #{category.color};
         border-color: #{category.color};
         color: white;
       }
   each category in categories
-    li(data-category=category.name, data-color=category.color)=category.title
+    li(data-category=category.name, data-color=category.color)=category.plural

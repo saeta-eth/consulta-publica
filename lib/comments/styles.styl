@@ -22,7 +22,7 @@ tab_color = #909fa0
 
       p
         display inline-block
-        font-size .5em
+        font-size 14px
         margin-right 10px
         color #8F8F8F
       .ui-switch
@@ -80,6 +80,10 @@ tab_color = #909fa0
     margin-top 30px
 
   .new-comment
+    position absolute
+    left 0
+    top 15px
+    border 1px solid
     background-color #eee
     color #0273ba
     border-radius 5px
@@ -87,15 +91,14 @@ tab_color = #909fa0
     width 100%
     text-align center
     padding 20px 0
-    position absolute
-    left 0
     transition opacity 0.5s ease
+    text-transform uppercase
 
   .new-comment:hover
     color #fff
     background-color #0273ba
 
-  form.comment-form
+  .comment-form
     position relative
     .form-group
       transition opacity 0.5s ease
@@ -112,10 +115,22 @@ tab_color = #909fa0
       .fa
         margin 0 6px
     .category
-      margin 5px
-      margin-right 20px
       display inline-block
+      display inline-flex
+      margin 0 20px 0 0
       cursor pointer
+      align-items center
+      cursor pointer
+
+      &.active
+        label
+          font-weight 700
+          color inherit
+
+      input[type="radio"]
+        cursor inherit
+
+
       label
         font-size 14px
         text-transform uppercase
@@ -123,6 +138,7 @@ tab_color = #909fa0
         display inline-block
         font-weight 100
         margin 0
+
       .active
         font-weight 700
       .radio-category
@@ -130,6 +146,11 @@ tab_color = #909fa0
         top 2px
         margin 0 5px 0 0
         height 14px
+        cursor inherit
+        line-height 1
+        font-size 14px
+
+
       @media screen and (max-width: 320px)
         display block
         margin 8px 0
