@@ -8,7 +8,7 @@
       span #{t('proposal-article.article.alert.text')}&nbsp;&nbsp;
       a.alert-link(href=learnMore, target="_blank") #{t('proposal-article.article.alert.learn-more')}
 
-  - if ( logged && !user.updatedAt )
+  - if (logged && !user.updatedAt)
     div.alert.alert-info.alert-dismissable.system-alert
       button(type="button", class="close", data-dismiss="alert", aria-hidden="true")
       i.fa.fa-lg.fa-info-circle
@@ -16,10 +16,6 @@
       span!= t('settings.profile.alert.message',{subPath: config.subPath})
 
   article.proposal.commentable-container
-    //- .meta-information
-    //-   a.meta-item.meta-location(href="#") Buenos Aires, Argentina
-    //-   small.meta-item.meta-timeago 10 days left
-
     .entry-tag(style="border-color: #{topic.tag.color}")
       //- .entry-icon
       //-   i.fa(class=tagImages[topic.tag.image].url, style="color: #{topic.tag.color}")
@@ -32,21 +28,27 @@
           span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
           span.meta-item.meta-timeago.ago(data-time=topic.closingAt.toString())
 
-    h1=topic.mediaTitle
+    h1= topic.mediaTitle
+
     - if (topic.author)
       h2.author=t('admin-topics-form.label.author') + ': '
         - if (topic.authorUrl)
           a(href=topic.authorUrl, target='_blank')= topic.author
         - else
           = topic.author
-    //-
-      - if (topic.user)
-        h2.author=t('admin-topics-form.label.author') + ': ' + topic.user.displayName
-    - if(topic.keywords)
+
+    - if (topic.keywords)
       ul.keywords
         - each keyword in topic.keywords
           li='#'+keyword
-    h3=topic.title
+
+    //-
+      - if (topic.user)
+        h2.author=t('admin-topics-form.label.author') + ': ' + topic.user.displayName
+
+    //-
+      h3= topic.title
+
     .entry-content
       .clauses
         each clause, i in clauses
