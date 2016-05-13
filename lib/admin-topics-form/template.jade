@@ -62,7 +62,7 @@
           input.form-control(type='text', id="coverUrl", name='coverUrl', tabindex=5, placeholder=t('admin-topics-form.placeholder.cover'), value=topic.coverUrl, validate='url')
         .form-group
           label= t('admin-topics-form.label.author')
-          input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=5, placeholder='John Doe', value=topic.author, validate='author')
+          input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=5, placeholder=t('admin-topics-form.placeholder.author'), value=topic.author, validate='author')
         .form-group
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=6, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')

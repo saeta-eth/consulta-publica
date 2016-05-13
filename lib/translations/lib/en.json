@@ -79,6 +79,7 @@
   "admin-topics-form.placeholder.add": "add...",
   "admin-topics-form.placeholder.cover": "http://images-repository.com/your_image.jpg",
   "admin-topics-form.placeholder.source": "http://topics-source.org/official-url/",
+  "admin-topics-form.placeholder.author": "John Doe",
   "admin-topics-form.title.create": "Create topic",
   "admin-topics-form.title.edit": "Edit topic",
   "admin-topics-form.url": "URL",
