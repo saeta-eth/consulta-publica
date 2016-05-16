@@ -1,17 +1,5 @@
-## A propos
+## Políticas de privacidad
 
-Democracy OS est une application web permettant d’organiser démocratiquement des débats et des prises de décisions pour toutes sortes d’organisations et de collectivités.
-
-Democracy OS est développé en Open Source par la fondation argentine [Democracia en Red](http://democracyos.org) et par ses partenaires internationaux dont [Democracy OS France](http://democracyos.eu) qui maintient la version  que vous utilisez.
-
-Le code de Democracy OS est accessible sur les répertoires GitHub suivants :
-
-Pour la version d’origine : [https://github.com/DemocracyOS/democracyos](https://github.com/DemocracyOS/democracyos)
-
-Pour la version française : [https://github.com/democracy-os-fr/democracyos](https://github.com/democracy-os-fr/democracyos)
-
-L’avenir de la démocratie open source reposant sur la participation de tous, nous vous invitons à joindre vos efforts aux nôtres, que vous soyez citoyen-codeur, citoyen-politiste ou citoyen-citoyen en nous écrivant à : contact@democracyos.eu 
-
-
-
-**Le présent site fonctionne sous la responsabilité juridique de la personne physique ou morale qui l’a mis en ligne.**
+La recolección y tratamiento automatizado de los datos personales tiene como finalidad el buen y fluido mantenimiento de la relación establecida entre el Usuario y el Administrador. Por su parte, el Sitio Web solamente podrá ceder los datos de los Usuarios a las entidades dependientes y/o bajo el control del MINISTERIO DE MODERNIZACIÓN con fines estadísticos o ante el requerimiento de la justicia competente.
+El Administrador garantiza la debida protección integral de los datos personales almacenados en el Sitio Web así como también el acceso a la información que sobre el mismo se registre, de conformidad a lo establecido en el artículo 43, párrafo tercero de la Constitución Nacional y la Ley N° 25.326 de Protección de los Datos Personales.
+Los Usuarios se comprometen a notificar de inmediato al Sitio Web sobre uso no autorizado de su cuenta o cualquier otra situación que pudiera ir contra la seguridad del sitio, como así también de casos de cyberbullyng, cyberstalking, cybergrooming y/o cualquier otra situación de hostigamiento, discriminación, acoso, etc.
