@@ -2,12 +2,18 @@
 .notifications-badge
   position relative
 
-  &.active
+  &.active,
+  &:hover
     .btn
+      color #fff
       background #0072BC
+
+      .caret
+        color #fff
 
     .dropdown-list
       display block
+
 
   .btn
     height header_height
@@ -21,28 +27,26 @@
     display none
     position absolute
     right 0
-    z-index 1000
-    padding 5px 0
-    min-width 160px
-    width 100%
-    font-size 14px
+    padding 0
+    margin 0
+    font-size 16px
     list-style none
-    border 1px solid rgba(#000,.15)
-    box-shadow 1px 1px 4px -1px rgba(#000, .175)
-    background-color #f9f9f9
+    box-shadow 0 6px 12px rgba(#000, .175)
+    background-color #0072bc
+    border-bottom-left-radius 3px
+    border-bottom-right-radius 3px
 
     a
       display block
-      clear both
-      padding 10px 20px
+      padding 12px 60px 12px 15px
       line-height 1.5
       color black
-      text-transform none
-      font-weight bold
       text-decoration none
+      color #fff
+      white-space nowrap
 
       &:hover
-        background #0072BC
+        background #0091ef
         color white
 
   .profile,
