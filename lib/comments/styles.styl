@@ -93,10 +93,16 @@ tab_color = #909fa0
     padding 20px 0
     transition opacity 0.5s ease
     text-transform uppercase
+    opacity 1
+    z-index 1
 
   .new-comment:hover
     color #fff
     background-color #0273ba
+    
+  .new-comment.hide
+    opacity 0
+    z-index -1
 
   .comment-form
     position relative
@@ -118,9 +124,7 @@ tab_color = #909fa0
       display inline-block
       display inline-flex
       margin 0 20px 0 0
-      cursor pointer
       align-items center
-      cursor pointer
 
       &.active
         label
@@ -138,6 +142,7 @@ tab_color = #909fa0
         display inline-block
         font-weight 100
         margin 0
+        cursor pointer
 
       .active
         font-weight 700
