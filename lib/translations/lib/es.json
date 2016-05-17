@@ -16,6 +16,7 @@
   "admin-sidebar.users.list": "Listado",
   "admin-sidebar.users.title": "Usuarios",
   "admin-sidebar.whitelists.title": "Usuarios habilitados",
+  "admin-comments.dowload-as-csv": "Descargar todos como .csv",
   "admin-tags-form.button.submit": "Guardar",
   "admin-tags-form.label.image": "Imagen",
   "admin-tags-form.label.name": "Nombre",

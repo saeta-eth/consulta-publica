@@ -1,3 +1,4 @@
 #forum-wrapper.admin-wrapper
   .admin-comments
-    p Comments!
+    .actions.well
+      a.btn.btn-primary(href='/api/comments/all.csv', target='_blank')= t('admin-comments.dowload-as-csv')
