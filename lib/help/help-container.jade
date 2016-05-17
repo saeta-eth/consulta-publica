@@ -2,8 +2,10 @@
   #help
     .sidebar-container
       ul.help-menu
-        li.heading= t('help.title')
-        - if (config.frequentlyAskedQuestions)
+        li.heading
+          | &nbsp;
+          //- = t('help.title')
+        - if (config.aboutUs)
           li: a(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
         - if (config.frequentlyAskedQuestions)
           li: a(href="#{config.subPath}/help/faq")= t('help.faq.title')
