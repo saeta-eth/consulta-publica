@@ -2,6 +2,7 @@ ul.admin-menu.nav.nav-pills.nav-stacked
   - if (config.multiForum && user.staff)
     li: a(href="#{config.subPath}/admin/forums" data-section='forums')=t('admin-sidebar.forums.title')
   li: a(href="#{config.subPath}/admin/topics" data-section='topics')=t('admin-sidebar.topics.title')
+  li: a(href="#{config.subPath}/admin/comments" data-section='comments')=t('admin-sidebar.comments.title')
   - if (user.staff)
     li: a(href="#{config.subPath}/admin/tags" data-section='tags')=t('admin-sidebar.tags.title')
     li: a(href="#{config.subPath}/admin/users" data-section='users')=t('admin-sidebar.users.title')
