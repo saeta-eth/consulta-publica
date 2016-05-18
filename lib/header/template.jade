@@ -27,5 +27,7 @@
       a(href=signup, style=style).link.pull-right.anonymous-user
         i.fa.fa-user
         span= t('header.signup')
-      - if (config.aboutUs)
-        a.link.pull-right(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
+      - if (config.frequentlyAskedQuestions)
+        a.link.pull-right(href="#{config.subPath}/help/faq")= t('help.faq.title')
+      //- - if (config.aboutUs)
+      //-   a.link.pull-right(href="#{config.subPath}/help/about-us")= t('help.about-us.title')

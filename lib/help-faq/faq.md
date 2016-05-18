@@ -1,4 +1,6 @@
-## FAQs
+## ¿Cómo Funciona?
 
-### ¿Qué es DemocracyOS?
-DemocracyOS es una plataforma online de código abierto especialmente diseñada para informar, debatir y votar propuestas públicas hacia la construcción de una democracia adaptada al siglo XXI. Puedes acceder al repositorio de nuestro código [aquí](https://github.com/DemocracyOS/democracyos).
+Acá podes ver o descargar un manual de usuario que explica las funcionalidades básicas de la Plataforma de Consulta Pública.
+<br>
+<br>
+<a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/0B29yHiYIZcpfRGFhZGM5NF9zYUZNWTBUTUZfNWdVVGo1U0Uw/view" target="_blank">Abrir Manual de Usuario</a>
