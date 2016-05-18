@@ -44,8 +44,8 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "The DemocracyOS Team",
-      "email": "no-reply@democracyos.org",
+      "name": "Consulta Pública Argentina",
+      "email": "gobiernoabierto@modernizacion.org.ar",
       "service": "",
       "auth": {
         "user": "",
@@ -93,19 +93,19 @@
     "subPath"
   ],
   "socialshare": {
-    "siteName": "DemocracyOS",
-    "siteDescription": "DemocracyOS voting system",
-    "image": "https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&s=400",
-    "domain": "democracyos.org",
+    "siteName": "Plataforma de Consulta Pública Argentina",
+    "siteDescription": "Consulta Pública es un nuevo canal de diálogo y debate que permite la interacción entre el gobierno y la comunidad promoviendo la participación ciudadana y el fortalecimiento de la democracia.",
+    "image": "https://cldup.com/_ZriYFdZN4.svg",
+    "domain": "consultapublica.argentina.gob.ar",
     "twitter": {
       "username": "@democracyos"
     }
   },
-  "logo": "/boot/logo.png",
-  "logoMobile": "/boot/logo-mobile.png",
+  "logo": "/boot/argentinagob.svg",
+  "logoMobile": "/boot/argentinagob.svg",
   "favicon": "/boot/favicon.ico",
-  "organizationName": "DemocracyOS on GitHub",
-  "organizationEmail": "no-reply@democracyos.org",
+  "organizationName": "Consulta Pública Argentina",
+  "organizationEmail": "gobiernoabierto@modernizacion.org.ar",
   "organizationUrl": "https://github.com/DemocracyOS/app",
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
