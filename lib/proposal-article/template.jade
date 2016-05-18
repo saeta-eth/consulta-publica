@@ -80,7 +80,7 @@
       //- Rendered by participants view
 
     //- Article share links
-    - var text = config.tweetText || topic.mediaTitle
+    - var text = config.tweetText ? t(config.tweetText, {topic: topic}) : topic.mediaTitle
     .share-links
       p
         | Compartir en
