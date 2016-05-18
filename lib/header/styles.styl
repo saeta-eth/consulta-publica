@@ -67,12 +67,17 @@
   .user
     float right
 
+
   .link
     padding 23px 12px 19px
     display inline-block
     line-height 30px
     font-weight 500
     font-size 16px
+
+    @media all and (max-width: 767px)
+      &.hide-md
+        display none
 
     i
       display none

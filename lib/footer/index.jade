@@ -13,8 +13,8 @@ footer
         a(href='/help/faq')= t('help.faq.title')
       - if (config.glossary)
         a(href='/help/glossary')= t('help.glossary.title')
-      - if (config.organizationEmail)
-        a(href='mailto:' + config.organizationEmail) Contacto
+      - if (config.aboutUs)
+        a(href='/help/about-us') Contacto
     nav.menu
       - if (config.termsOfService)
         a(href='/help/terms-of-service')= t('help.tos.title')

@@ -5,10 +5,10 @@
         li.heading
           | &nbsp;
           //- = t('help.title')
-        - if (config.aboutUs)
-          li: a(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
         - if (config.frequentlyAskedQuestions)
           li: a(href="#{config.subPath}/help/faq")= t('help.faq.title')
+        - if (config.aboutUs)
+          li: a(href="#{config.subPath}/help/about-us")= t('help.about-us.title')
         - if (config.termsOfService)
           li: a(href="#{config.subPath}/help/terms-of-service")= t('help.tos.title')
         - if (config.privacyPolicy)
