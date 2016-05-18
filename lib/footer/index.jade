@@ -7,10 +7,6 @@ footer
       p.text-muted.small
         | Los contenidos de Argentina.gob.ar están licenciados bajo <a href='https://creativecommons.org/licenses/by/2.5/ar/'>Creative Commons Reconocimiento 2.5 Argentina License
     nav.menu
-      - if (config.termsOfService)
-        a(href='/help/terms-of-service')= t('help.tos.title')
-      - if (config.privacyPolicy)
-        a(href='/help/privacy-policy')= t('help.pp.title')
       - if (config.aboutUs)
         a(href='/help/about-us')= t('help.about-us.title')
       - if (config.frequentlyAskedQuestions)
@@ -19,3 +15,8 @@ footer
         a(href='/help/glossary')= t('help.glossary.title')
       - if (config.organizationEmail)
         a(href='mailto:' + config.organizationEmail) Contacto
+    nav.menu
+      - if (config.termsOfService)
+        a(href='/help/terms-of-service')= t('help.tos.title')
+      - if (config.privacyPolicy)
+        a(href='/help/privacy-policy')= t('help.pp.title')

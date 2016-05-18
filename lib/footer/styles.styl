@@ -11,9 +11,13 @@ footer
     flex-direction row
     flex-wrap wrap
     align-items flex-start
+    justify-content space-between
 
   .institutional
-    max-width 560px
+    flex-grow 2
+
+    p
+      max-width 560px
 
   .logo
     span
@@ -33,6 +37,9 @@ footer
   .menu
     padding 0 15px
     text-align left
+
+    &:first-of-type
+      flex-grow 3
 
     a
       display block
