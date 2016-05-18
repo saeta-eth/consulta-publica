@@ -182,7 +182,7 @@
   "forgot.error.email-not-valid": "Tienes que validar tu dirección de correo electrónico antes de poder reestablecer tu contraseña",
   "forgot.explanation": "Te enviaremos un correo electrónico con un enlace para reestablecer tu contraseña",
   "forgot.mail.example": "ejemplo@email.com",
-  "forgot.mail.sent": "Enviamos un mensaje a tu correo electrónico con instrucciones para crear una nueva contraseña",
+  "forgot.mail.sent": "Enviamos un email a tu casilla para continuar con el proceso",
   "forgot.question": "¿Olvidaste tu contraseña?",
   "forgot.reset": "¡Reestablecer contraseña!",
   "form.please-wait": "Por favor espera",
