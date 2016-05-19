@@ -45,7 +45,7 @@
     "token": "",
     "mailer": {
       "name": "Consulta Pública Argentina",
-      "email": "gobiernoabierto@modernizacion.org.ar",
+      "email": "gobiernoabierto@modernizacion.gob.ar",
       "service": "",
       "auth": {
         "user": "",
@@ -105,7 +105,7 @@
   "logoMobile": "/boot/argentinagob.svg",
   "favicon": "/boot/favicon.ico",
   "organizationName": "Consulta Pública Argentina",
-  "organizationEmail": "gobiernoabierto@modernizacion.org.ar",
+  "organizationEmail": "gobiernoabierto@modernizacion.gob.ar",
   "organizationUrl": "https://github.com/DemocracyOS/app",
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
