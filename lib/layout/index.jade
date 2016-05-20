@@ -57,8 +57,10 @@ html(lang='en')
         window.config=!{JSON.stringify(client)};
         window.config.locale='#{locale}';
         window.translations=!{JSON.stringify(translations)};
+      script(src='#{config.subPath}/app.js')
       - if (config.segmentKey)
         include includes/segment
-      script(src='#{config.subPath}/app.js')
+      - if (config.googleTagManager)
+        include includes/google-tag-manager
       //- End of `Javascripts`
       include includes/fonts
