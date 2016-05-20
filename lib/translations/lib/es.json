@@ -314,6 +314,7 @@
   "settings.locale.zh_TW": "Chino",
   "settings.notificatinos.get-email-when": "Recibir un correo electrónico cuando",
   "settings.notifications": "Notificaciones",
+  "settings.notifications.new-comment": "Se publica un nuevo comentario",
   "settings.notifications.new-topic": "Un nuevo tema está publicado",
   "settings.notifications.someone-replies-your-comments": "Alguien responde a uno de tus comentarios",
   "settings.notifications.title": "Configuración de notificaciones",
