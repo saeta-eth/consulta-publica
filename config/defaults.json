@@ -54,8 +54,7 @@
       "smtp": {
         "port": 0,
         "host": "",
-        "secure": true,
-        "tls": {}
+        "secure": true
       }
     }
   },
