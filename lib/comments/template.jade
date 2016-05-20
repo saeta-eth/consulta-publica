@@ -16,7 +16,7 @@
             label.category-label(for='cat_#{category.value}')=category.label
       .form-group
         textarea.form-control#f-text(name='text', rows='6', validate='required max-length:4096', placeholder=t('comments.your.placeholder'), tabindex=1)
-        a.help(href='#{config.subPath}/help/markdown', target='_blank')
+        a.help(href='#{config.subPath}/ayuda/markdown', target='_blank')
           span=t('markdown.comments.formatting-help')
           span.fa.fa-question-circle
       //- .form-group

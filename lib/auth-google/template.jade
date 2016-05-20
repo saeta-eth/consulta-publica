@@ -14,6 +14,6 @@
       span= t('signin.login-with-google')
   p!=t('signin.google.contact',{email: config.organizationEmail})
   - if (config.termsOfService)
-    p: a(href="#{config.subPath}/help/terms-of-service")= t('help.tos.title')
+    p: a(href="#{config.subPath}/ayuda/terminos-y-condiciones")= t('help.tos.title')
   - if (config.privacyPolicy)
-    p: a(href="#{config.subPath}/help/privacy-policy")= t('help.pp.title')
+    p: a(href="#{config.subPath}/ayuda/privacidad")= t('help.pp.title')
