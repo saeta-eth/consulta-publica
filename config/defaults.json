@@ -129,6 +129,7 @@
   "headerContrast": false,
   "styleguide": false,
   "googleAPIKey": "",
+  "googleTagManager": "",
   "visibility": "visible",
   "usersWhitelist": false,
   "multiForum": false,
