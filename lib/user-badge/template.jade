@@ -13,7 +13,7 @@
         a(href='#{config.subPath}/notifications')=t('notifications.title')
       - if (user.staff)
         li: a(href='#{config.subPath}/admin')= t('header.admin')
-      li: a(href='#{config.subPath}/settings')= t('header.settings')
+      li: a(href='#{config.subPath}/ajustes')= t('header.settings')
       - if (config.frequentlyAskedQuestions)
         li: a(href="#{config.subPath}/ayuda/como-funciona")= t('help.faq.title')
       - if (config.aboutUs)

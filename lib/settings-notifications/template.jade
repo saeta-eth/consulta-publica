@@ -1,10 +1,10 @@
-#notifications-wrapper.hide
+#notificaciones-wrapper.hide
   .notifications-settings
     .heading
       h1
         i.fa.fa-bell-o
         span=t('settings.notifications.title')
-    form.form(action="#{config.subPath}/settings/notifications", method="post", role="form", autosubmit='autosubmit')
+    form.form(action="#{config.subPath}/ajustes/notificaciones", method="post", role="form", autosubmit='autosubmit')
       ul.form-messages
       .form-group
         label #{t('settings.notificatinos.get-email-when')}

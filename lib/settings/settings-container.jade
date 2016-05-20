@@ -3,17 +3,17 @@
     .sidebar-container
       ul.settings-menu.nav.nav-pills.nav-stacked
         li.heading= t('settings.title')
-        li: a(href="#{config.subPath}/settings/profile")
+        li: a(href="#{config.subPath}/ajustes/perfil")
           i.fa.fa-user
           span= t('settings.profile')
         - if(user.hasPassword)
-          li: a(href="#{config.subPath}/settings/password")
+          li: a(href="#{config.subPath}/ajustes/contraseña")
             i.fa.fa-lock
             span= t('password')
-        li: a(href="#{config.subPath}/settings/sessions", style="display: none;")
+        li: a(href="#{config.subPath}/ajustes/sessions", style="display: none;")
           i.fa.fa-history
           span= t('settings.sessions')
-        li: a(href="#{config.subPath}/settings/notifications")
+        li: a(href="#{config.subPath}/ajustes/notificaciones")
           i.fa.fa-bell-o
           span= t('settings.notifications')
     .settings-content
