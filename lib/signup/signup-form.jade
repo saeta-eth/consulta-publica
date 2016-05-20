@@ -50,9 +50,9 @@
             p= t('signup.accepting')
             ul
               - if (tos)
-                li: a(href='#{config.subPath}/help/terms-of-service', target='_blank')=t('help.tos.title')
+                li: a(href='#{config.subPath}/ayuda/terminos-y-condiciones', target='_blank')=t('help.tos.title')
               - if (pp)
-                li: a(href='#{config.subPath}/help/privacy-policy', target='_blank')=t('help.pp.title')
+                li: a(href='#{config.subPath}/ayuda/privacidad', target='_blank')=t('help.pp.title')
     - if (config.facebookSignin)
       #auth-facebook-form
         form(action="#{config.subPath}/auth/facebook", method="get", role="form")
