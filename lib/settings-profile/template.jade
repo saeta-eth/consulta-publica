@@ -29,14 +29,15 @@
       .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled' name='email', tabindex=4, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
-      .form-group
-        - if(user.party)
-          label #{t('settings.party')}
-          input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('settings.party'), value=user.party ? user.party : '')
-        - else
-          label #{t('settings.party')}
-          input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('settings.party'))
-      .form-group
+      //-
+        .form-group
+          - if(user.party)
+            label #{t('settings.party')}
+            input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('settings.party'), value=user.party ? user.party : '')
+          - else
+            label #{t('settings.party')}
+            input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('settings.party'))
+      .form-group.hide
         label #{t('settings.locale')}
         select.form-control(id='locale', name='locale', tabindex=6)
       //-
