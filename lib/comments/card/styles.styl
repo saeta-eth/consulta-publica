@@ -188,12 +188,13 @@
         color #c0392b
     &.btn-edit, &.btn-reply-edit
       &:hover
-        color #f39c12
+        color #0072bc
     &.link-report,
     &.link-remove,
     &.link-edit
       float right
       color #333
+      cursor pointer
       i
         margin-right 3px
 
@@ -268,7 +269,7 @@
         color #c0392b
     &.btn-edit, &.btn-reply-edit
       &:hover
-        color #f39c12
+        color #0072bc
 
     &.error, &.loginrequired
       a
@@ -285,6 +286,13 @@
     .media-heading .comment-action,
     .comment-reply
         display inline-block
+        
+@media only screen and (max-width  550px)
+  .comment-item 
+    .media-heading
+      small
+        display block
+        margin 0!important
 
 @import './edit/styles'
 @import './vote/styles'

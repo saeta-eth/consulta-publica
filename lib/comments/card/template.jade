@@ -41,11 +41,13 @@ li.comment-item(class=classes)
                 li
                   a.comment-action.link-edit.btn-edit(href="#", title=t('comments.edit.argument'))
                     i.fa.fa-pencil
+                    spant=t('common.edit')
               - if (own || user.staff)
                 - var hide = repliesCounter && !user.staff ? 'hide' : ''
                 li
-                  a.delete-comment(title=t('comment-card.remove-argument'), class=hide)
+                  a.comment-action.link-remove.btn-remove.delete-comment(title=t('comment-card.remove-argument'), class=hide)
                     i.fa.fa-trash-o
+                    spant=t('side-comments.delete')
       - if (comment.count)
         div.count
           span= comment.count + ' ' + t('comment-card.count')
