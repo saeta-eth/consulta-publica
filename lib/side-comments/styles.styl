@@ -1,11 +1,9 @@
 .commentable-section
   position relative
-
-  &:hover
-    .side-comment
-      .marker
-        display block
-
+.proposal.side-comments-open .clause
+  opacity 0.15
+.side-comments-open .commentable-section.side-comment-p-active
+  opacity 1
 .side-comment
   position absolute
   top 0
@@ -21,7 +19,6 @@
   .hide
     display none
   .marker
-    display none
     position absolute
     top 0
     right 0
