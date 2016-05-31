@@ -15,9 +15,11 @@ li.reply-item(data-id=reply.id, data-comment-id=comment.id)
                 li
                   a.comment-action.link-edit.btn-reply-edit(href="#", title=t('comments.edit.argument'))
                     i.fa.fa-pencil
+                    spant=t('common.edit')
               li
                 a.comment-action.link-remove.btn-reply-remove(href="#", title=t('comment-card.remove-argument'))
                   i.fa.fa-trash-o
+                  spant=t('side-comments.delete')
         span #{reply.author.fullName}
         - if (reply.author.staff)
           span.badge.staff=t('admin-users.list.staff')

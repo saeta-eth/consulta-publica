@@ -37,6 +37,7 @@ li.comment-item(class=classes)
                   a.comment-action.link-report.flag(href="#", title=spamTitle, class=flags ? 'selected' : '')
                     span.count=comment.flags.length ? comment.flags.length : ''
                     i.glyphicon.glyphicon-flag
+                    spant=t('common.report')
               - if (own)
                 li
                   a.comment-action.link-edit.btn-edit(href="#", title=t('comments.edit.argument'))
