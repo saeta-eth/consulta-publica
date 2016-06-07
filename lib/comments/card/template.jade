@@ -80,7 +80,7 @@ li.comment-item(class=classes)
           i.fa.fa-comments-o
           span.reply-counter= repliesCounter > 0 ? repliesCounter : ''
           i.fa.fa-caret-down
-    - if (user.id)
+    - if (user.id && !comment.closed)
       .btn-group(role='group')
         button.btn.btn-block.btn-dashed.new-reply
           i.fa.fa-plus

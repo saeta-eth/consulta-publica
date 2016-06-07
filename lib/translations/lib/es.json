@@ -137,6 +137,7 @@
   "comments.arguments.reply": "Responder a este comentario",
   "comments.cannot-be-empty": "El comentario no puede estar vacío",
   "comments.cannot-remove": "¡El comentario tiene respuestas, no puede ser borrado!",
+  "comments.closed":"Los comentarios estan cerrados",
   "comments.deleted-arguments": "Comentarios eliminados",
   "comments.edit.argument": "Editar comentario",
   "comments.edited": "editado",

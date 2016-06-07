@@ -139,6 +139,7 @@
   "comments.cannot-be-empty": "Comment cannot be empty",
   "comments.cannot-remove": "Comment has replies, cannot be removed!",
   "comments.count.title": "Contributors",
+  "comments.closed":"Comments are closed",
   "comments.deleted-arguments": "Deleted comments",
   "comments.edit.argument": "Edit comment",
   "comments.edited": "edited",
