@@ -1,11 +1,14 @@
 - var logged = user.logged()
 
 .comments.container
+  - if (item.closed)
+    .alert.alert-info.closed-message
+      != t('comments.closed')
   .comments-header
     h3
       =t('comments.arguments')
   - if (logged)
-    form.comment-form(method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
+    form.comment-form(style=(item.closed ? 'display:none;':''), method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
       .new-comment=t('comments.new.argument')
       .form-group.categories-input
         label.category-select=t('comments.your.category')

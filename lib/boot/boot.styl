@@ -209,6 +209,44 @@ label
     background-color #999
     color white
 
+
+.alert
+  color white
+  border 1px solid
+  border-radius border_radius
+  font-size .9em
+  font-weight normal
+
+  &.with-icon
+    position relative
+    padding-left 3em
+
+    .alert-icon
+      position absolute
+      margin-right .5em
+      top 1.2em
+      left 1.3em
+
+  &.alert-info
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+
+  &.alert-success
+    color darken(#27ae60, 50%)
+    border-color #27ae60
+    background-color lighten(#27ae60, 70%)
+
+  &.alert-warning
+    color darken(#f1c40f, 50%)
+    border-color #f1c40f
+    background-color lighten(#f1c40f, 70%)
+
+  &.alert-danger
+    color darken(#d9534f, 50%)
+    border-color #d9534f
+    background-color lighten(#d9534f, 70%)
+
 .system-alert
   margin-top 20px
 

@@ -139,6 +139,7 @@
   "comments.cannot-be-empty": "Comment cannot be empty",
   "comments.cannot-remove": "Comment has replies, cannot be removed!",
   "comments.count.title": "Contributors",
+  "comments.closed":"Gracias por participar de la Consulta Pública sobre los compromisos para el Plan Nacional de Gobierno Abierto 2015-2017 ante la Alianza de Gobierno Abierto.<br><br>En las próximas semanas, se publicarán las respuestas a los comentarios referidos a los compromisos.<br><br>Aquellos comentarios fuera del alcance de esta consulta pública se derivarán al organismo correspondiente para su consideración.<br><br>Saludos,<br>Equipo de Gobierno Abierto.",
   "comments.deleted-arguments": "Deleted comments",
   "comments.edit.argument": "Edit comment",
   "comments.edited": "edited",
