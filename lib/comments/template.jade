@@ -5,7 +5,7 @@
     h3
       =t('comments.arguments')
   - if (item.closed)
-    div.closed-comments=t('comments.closed')
+    .alert.alert-info!=t('comments.closed')
   - if (logged)
     form.comment-form(style=(item.closed ? 'display:none;':''), method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
       .new-comment=t('comments.new.argument')
