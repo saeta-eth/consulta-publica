@@ -3,7 +3,10 @@
 .comments.container
   - if (item.closed)
     .alert.alert-info.closed-message
-      != t('comments.closed')
+      - if (item.closingMessage)
+        != item.closingMessage
+      - else
+        != t('comments.closed')
   .comments-header
     h3
       =t('comments.arguments')
