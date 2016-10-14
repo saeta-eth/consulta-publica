@@ -54,7 +54,7 @@ li.comment-item(class=classes)
           span= comment.count + ' ' + t('comment-card.count')
   .comment-panel
     .comment-body
-      .comment-text!=markdown(comment.text)
+      .comment-text!=markdown(comment.text, {sanitize: true})
       - if (own || user.staff)
         .oncomment.remove-comment= t('comments.arguments.confirm-remove')
           -if (!own && user.staff)

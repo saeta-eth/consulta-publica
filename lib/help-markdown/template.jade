@@ -24,7 +24,7 @@
       .example
         p
           strong= t('markdown.will.become')
-        != dosMarkdown(example)
+        != marked(example)
       p= t('markdown.url-autolinking.text.2')
       p= t('markdown.url-autolinking.text.3')
       - example = t('markdown.url-autolinking.example2')
@@ -33,7 +33,7 @@
       .example
         p
           strong= t('markdown.will.become')
-        != dosMarkdown(example)
+        != marked(example)
     section
       h4= t('markdown.linebreaks.title')
       p= t('markdown.linebreaks.text')
@@ -46,7 +46,7 @@
       .example
         p
           strong= t('markdown.will.become')
-        != dosMarkdown(example)
+        != marked(example)
     section
       h4= t('markdown.playground.title')
       textarea.playground(id='playground', placeholder=t('markdown.playground.text'))

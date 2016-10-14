@@ -32,7 +32,7 @@ li.reply-item(data-id=reply.id, data-comment-id=comment.id)
         - if (reply.editedAt)
           small.edited · #{t('comments.edited')}
   .reply-body
-    div.reply-text!=markdown(reply.text)
+    div.reply-text!= markdown(reply.text, {sanitize: true})
     - if (own || user.staff)
       div.onreply.remove-reply
         - if (!own)
