@@ -92,6 +92,8 @@ class TopicArticle extends Component {
           tags={topic.tags}
           forumName={forum.name}
           mediaTitle={topic.mediaTitle} />
+
+        <h4 className='topic-action-title'>{topic.closed ? 'Resultados' : 'Podés votar en esta consulta'}</h4>
         { topic.action.method &&
           <TopicAction
             topic={topic} />
