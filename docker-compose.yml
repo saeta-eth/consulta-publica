@@ -9,6 +9,7 @@ services:
       - NODE_ENV=development
       - DEBUG=democracyos*
       - MONGO_URL=mongodb://mongo/development
+      - TALK_ROOT_URL=http://127.0.0.1:3001
     links:
       - mongo
     ports:
@@ -25,3 +26,24 @@ services:
       - 27017:27017
     volumes:
       - ./tmp/db:/data/db
+
+  talk:
+    image: coralproject/talk:4.7
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - NODE_ENV=development # remove this line in production
+      - TALK_MONGO_URL=mongodb://mongo/talk # Need to review this!!
+      - TALK_REDIS_URL=redis://redis
+      - TALK_ROOT_URL=http://127.0.0.1:3001
+      - TALK_PORT=3001
+      - TALK_JWT_SECRET=password
+  redis:
+    image: redis:latest
+    restart: always
+    volumes:
+      - ./tmp/redis/data
